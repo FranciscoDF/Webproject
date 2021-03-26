@@ -23,4 +23,28 @@ if($_SESSION['username'] == NULL) {
 	header('Location: connexion.php');
 }
 
+//EXEMPLE class
+/*
+private class role:nom_obj
+
+function(){
+    requete recup les données liées à la table 
+    requete recup l'attrubut de l'autre classe (appel methode de la class role, promotion et centre)
+    n,x,y=ID_max de chaque class en requete
+    fetch
+    tableau de valeur 
+    foreach($fetchuser as $row1) {
+        $total=$row1
+        for(i=0, i<n, i++) {
+            if ($row2['id'] == $row1['id_role'])
+                $total=$row2['nom']
+
+        + promotion idem changer n et i
+        + centre idem changer n et i
+        }
+    }
+
+}
+*/
+
 ?>
