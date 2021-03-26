@@ -11,7 +11,7 @@ class user {
     public $center_id;
    
    
-function get() {8 attributs }
+function get() {}
 
     function getId() {}
     function getUsername() {}
