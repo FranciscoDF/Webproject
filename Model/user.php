@@ -1,5 +1,6 @@
 <?php
 
+include 'Connexion_BDD.php';
 class user {
     public $user_id;
     public $user_username;
@@ -11,16 +12,69 @@ class user {
     public $center_id;
    
    
-function get() {}
+    function get(test, test1, test2, test3, test4, test5, test6, test7, $sort) {
+        
+        requete ici
+        $query = $dbh->prepare('SELECT id_utilisateur, user_utilisateur, mdp_utilisateur, nom_utilisateur, prenom_utilisateur,  FROM utilisateurs WHERE pseudo = (:pseudo) AND motDePasse = (:motDePasse)');
+        $query->execute([
+            'pseudo' => $_POST['pseudo'],
+            'motDePasse' => $_POST['motDePasse']
+            'centre' => $_POST['center']
+        ]);
+        $ok = $query->fetch();
 
-    function getId() {}
+        switch ($sort) { //https://www.php.net/manual/fr/array.sorting.php
+        case 0:
+            
+            $pdoQuery = "SELECT * FROM `utilisateur` ";
+
+            $req = $pdo->prepare($pdoQuery);
+            $result =$req->execute();
+    
+            $verify = $pdo->query($pdoQuery);
+            $fetch = $verify->fetch(PDO::FETCH_ASSOC);
+            $a['user']= jean.cadre asort($a['user'])
+
+            break;
+        case 1:
+
+            echo "i égal 1";
+            break;
+
+        case 2:
+            echo "i égal 2";
+            break;
+        case 3:
+            echo "i égal 0";
+            break;
+        case 4:
+            echo "i égal 1";
+            break;
+        case 5:
+            echo "i égal 2";
+            break;
+        case 6:
+            echo "i égal 0";
+            break;
+        case 7:
+            echo "i égal 1";
+            break;
+        case 8:
+            echo "i égal 2";
+            break;
+        case 9:
+
+        }
+    }
+
+    /*function getId() {}
     function getUsername() {}
     function getPassword() {}
     function getFname() {}
     function getLname() {}
     function getRoleID() {}
     function getPromoID() {}
-    function getCenterID() {}
+    function getCenterID() {}*/
 
     function modifyUsername() {}
     function modifyPassword() {}
@@ -33,8 +87,6 @@ function get() {}
 
 function getUsers(){
 /*
-    include 'Connecion_BDD.php';
-
     $pdoQuery = "SELECT * FROM `utilisateur` ";
 
     $req = $pdo->prepare($pdoQuery);
