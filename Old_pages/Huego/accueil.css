@@ -1,0 +1,59 @@
+.logo img{
+    float: left;
+    width: 200px;
+    height: 70px;
+}
+  @media screen and (max-width: 100%) {
+    .navbar-brand{
+      display: hidden;
+    }
+  }
+
+main{
+    overflow: hidden;
+    background-color: #343A40;
+}
+.titre{
+    background-color: #343A40;
+    }
+.titre h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    padding: 5vw 1vw 5vw 1vw;
+    color: white;
+}
+.button_a{
+    background-color: white;
+    padding: 8vw 1vw 10vw 0vw;
+    text-align: center;
+
+}
+
+.button_a button{
+
+    background-color: #343A40;
+    color:white;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    width: 300px;
+    height: 75px;
+    box-shadow: 5px 5px 5px grey;
+}
+.button_a button:hover{
+    background-color: white;
+    color: black;
+
+}
+html{
+    background-color: white;
+}
+footer{
+    background-color: #343A40;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+footer p{
+    color:white;
+}
