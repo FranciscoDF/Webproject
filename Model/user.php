@@ -12,20 +12,24 @@ class user {
     public $center_id;
    
    
+
+    /*
     function get(test, test1, test2, test3, test4, test5, test6, test7, $sort) {
         
         requete ici
-        $query = $dbh->prepare('SELECT id_utilisateur, user_utilisateur, mdp_utilisateur, nom_utilisateur, prenom_utilisateur,  FROM utilisateurs WHERE pseudo = (:pseudo) AND motDePasse = (:motDePasse)');
-        $query->execute([
-            'pseudo' => $_POST['pseudo'],
-            'motDePasse' => $_POST['motDePasse']
-            'centre' => $_POST['center']
-        ]);
-        $ok = $query->fetch();
-
+        
         switch ($sort) { //https://www.php.net/manual/fr/array.sorting.php
-        case 0:
+        case 0: //on souhaite simplement récupérer les données sans conditions
+            $query = $dbh->prepare("SELECT '{$test}' '{$test1}'  '{$test2}' '{$test3}' '{$test}' '{$test}' '{$test}'FROM utilisateurs");
+            $query = $dbh->prepare('SELECT ":id, :username, :test2, :test3, :test4, :test5, :test6, :test7" FROM utilisateurs');
+            $query->execute([
+                'pseudo' => $_POST['pseudo'],
+                'motDePasse' => $_POST['motDePasse'],
+                'centre' => $_POST['center']
+            ]);
             
+            $ok = $query->fetch();
+
             $pdoQuery = "SELECT * FROM `utilisateur` ";
 
             $req = $pdo->prepare($pdoQuery);
@@ -37,7 +41,6 @@ class user {
 
             break;
         case 1:
-
             echo "i égal 1";
             break;
 
@@ -65,7 +68,7 @@ class user {
         case 9:
 
         }
-    }
+    }*/
 
     /*function getId() {}
     function getUsername() {}
