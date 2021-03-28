@@ -68,8 +68,7 @@ class user {
         case 9:
 
         }
-    }*/
-
+    }
     /*function getId() {}
     function getUsername() {}
     function getPassword() {}
