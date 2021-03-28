@@ -1,8 +1,8 @@
 <?php
 
-class role {
-    public $role_id;
-    public $role_name;
+class sector {
+    public $sector_id;
+    public $sector_name;
    
    
     function getId() {}
@@ -13,9 +13,6 @@ function getRoles(){
 
 
 }
-
-
-
 
 
 
