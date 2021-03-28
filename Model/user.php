@@ -1,6 +1,5 @@
 <?php
 
-include 'Connexion_BDD.php';
 class user {
     private $_id_user;
     private $_username_user;
