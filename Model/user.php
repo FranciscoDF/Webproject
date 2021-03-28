@@ -2,16 +2,86 @@
 
 include 'Connexion_BDD.php';
 class user {
-    public $user_id;
-    public $user_username;
-    public $user_password;
-    public $user_Fname;
-    public $user_Lname;
-    public $role_id;
-    public $promo_id;
-    public $center_id;
-   
-   
+    private $_id_user;
+    private $_username_user;
+    private $_password_user;
+    private $_fname_user;
+    private $_lname_user;
+    private $_id_role;
+    private $_id_promo;
+    private $_id_center;
+
+    public function hydrate(array $data){
+        foreach ($data as $key => $value) {
+            $method = 'set'.ucfirst($key);
+
+            if (method_exists($this, $method))
+                $this->$method($value);
+        }
+    }
+
+
+    public function id_user() {return $this->_id_user;}
+    public function username_user() {return $this->_username_user;}
+    public function password_user() {return $this->_password_user;}
+    public function fname_user() {return $this->_fname_user;}
+    public function lname_user() {return $this->_lname_user;}
+    public function id_role() {return $this->_id_role;}
+    public function id_promo() {return $this->_id_promo;}
+    public function id_center(){return $this->_id_center;}
+
+    public function setId_user($id) {
+        $this->_id_user = (int) $id;
+        if ($id > 0)
+            $this->_id_username = $id;
+    }
+
+    public function setUsername_user($username) {
+        if (is_string($username) && strlen($username) <= 30)
+            $this->_username_user = $username;
+    }
+    
+    public function setPassword_user($password) {
+        if (is_string($password) && strlen($password) <= 30)
+            $this->_password_user = $password;
+    }
+
+    public function setFname_user($fname) {
+        if (is_string($fname) && strlen($fname) <= 20)
+            $this->_fname_user = $fname;
+    }
+
+    public function setLname_user($lname) {
+        if (is_string($lname) && strlen($lname) <= 25)
+            $this->_lname_user = $lname;
+    }
+
+    public function setId_role($id) {
+        $this->_id_role = (int) $id;
+    }
+
+    public function setId_promo($id) {
+        $this->_id_promo = (int) $id;
+    }
+
+    public function setId_center($id) {
+        $this->_id_center = (int) $id;
+    }
+
+}
+/*
+function getUsers(){
+
+    $pdoQuery = "SELECT * FROM `utilisateur` ";
+
+    $req = $pdo->prepare($pdoQuery);
+    $result =$req->execute();
+    
+    $verify = $pdo->query($pdoQuery);
+    $fetch = $verify->fetch(PDO::FETCH_ASSOC);
+    print_r($fetch);
+*/
+
 
     /*
     function get(test, test1, test2, test3, test4, test5, test6, test7, $sort) {
@@ -69,7 +139,7 @@ class user {
 
         }
     }
-    /*function getId() {}
+    function getId() {}
     function getUsername() {}
     function getPassword() {}
     function getFname() {}
@@ -77,31 +147,5 @@ class user {
     function getRoleID() {}
     function getPromoID() {}
     function getCenterID() {}*/
-
-    function modifyUsername() {}
-    function modifyPassword() {}
-    function modifyFname() {}
-    function modifyLname() {}
-    function modifyRoleID() {}
-    function modifyPromoID() {}
-    function modifyCenterID() {}
-}
-
-function getUsers(){
-/*
-    $pdoQuery = "SELECT * FROM `utilisateur` ";
-
-    $req = $pdo->prepare($pdoQuery);
-    $result =$req->execute();
-    
-    $verify = $pdo->query($pdoQuery);
-    $fetch = $verify->fetch(PDO::FETCH_ASSOC);
-    print_r($fetch);
-*/
-
-}
-
-
-
 
 ?>
