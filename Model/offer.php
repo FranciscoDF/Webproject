@@ -74,5 +74,4 @@ class offer {
     }
 
 
-    ///// Ajouter les méthodes CRUD
 }
