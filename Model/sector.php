@@ -20,9 +20,9 @@ class sector {
     public function name_sector() {return $this->_name_sector;}
 
     public function setId_sector($id) {
-        $id_sector = (int) $id;
+        $this->_id_sector = (int) $id;
         if ($id_sector > 0)
-            $this->_id_sector = $id_sector;
+            $this->_id_sector = $id;
     }
 
     public function setName_sector($name) {
