@@ -11,6 +11,13 @@ class ControllerUser
         if (isset($url) && count($url) > 1){
             throw new Exception('Page introuvable');
         }
+
+        switch ($url[1]) {
+            case 'view' : userview();
+            case 'ajouter' : useradd();
+            case 'update' : userupdate();
+            case 'delete' : userdelete();
+        }
     }
 
     private function userview() {
@@ -23,7 +30,12 @@ class ControllerUser
 
     private function useradd(user $user) {
         $this->_userManager = new userManager;
-        $user= $this->_userManager
+        $user= $this->_userManager->add();
+    }
+
+    private function userupdate(user $user){
+        $this->_userManager = new userManager;
+        $user= $this->_userManager->update();
     }
 
 }

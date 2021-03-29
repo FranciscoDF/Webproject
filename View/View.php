@@ -27,7 +27,7 @@ class Views{
 
             ob_start(); // Mise en tempon
             
-            // INCLUTRE LE FICHIER VUE
+            // INCLURE LE FICHIER VUE
             require $file;
             
             return ob_get_clean();

@@ -38,9 +38,10 @@ class Router
         }
         catch(Exception $e) //GESTIONS DES ERREURS
         {
-            $errorMsg = $e->getMessage();
+            echo "catch";
+            /*$errorMsg = $e->getMessage();
             $this->_view = new Vew('Error');
-            $this->_view->generate(array('errorMsg' =>$errorMsg));
+            $this->_view->generate(array('errorMsg' =>$errorMsg));*/
         }
     }
 }
