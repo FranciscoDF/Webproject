@@ -1,6 +1,6 @@
 <?php
 
-include 'Connexion_BDD.php';
+//include 'Connexion_BDD.php';
 class center {
     private $_id_center;
     private $_name_center;
