@@ -21,7 +21,7 @@ class sector {
 
     public function setId_sector($id) {
         $this->_id_sector = (int) $id;
-        if ($id > 0)
+        if ($id_sector > 0)
             $this->_id_sector = $id;
     }
 
