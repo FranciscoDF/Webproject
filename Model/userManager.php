@@ -48,12 +48,12 @@ class userManager {
     public function update(user $user) {
         $query = $this->_co->prepare('UPDATE utilisateur SET user_utilisateur = :user_utilisateur, mdp_utilisateur = :mdp_utilisateur, nom_utilisateur = :nom_utilisateur, prenom_utilisateur = :prenom_utilisateur, id_role = :id_role, id_promotion = :id_promotion, id_centre = :id_centre ');
         $query->execute([
-            'user_utilisateur'=> $user->username_user();
-            'mdp_utilisateur'=> $user->password_user();
-            'mdp_utilisateur'=> $user->fname_user();
-            'mdp_utilisateur'=> $user->lname_user();
-            'mdp_utilisateur'=> $user->id_role();
-            'mdp_utilisateur'=> $user->id_promo();
+            'user_utilisateur'=> $user->username_user(),
+            'mdp_utilisateur'=> $user->password_user(),
+            'mdp_utilisateur'=> $user->fname_user(),
+            'mdp_utilisateur'=> $user->lname_user(),
+            'mdp_utilisateur'=> $user->id_role(),
+            'mdp_utilisateur'=> $user->id_promo(),
             'mdp_utilisateur'=> $user->id_center()
         ]);
     }
