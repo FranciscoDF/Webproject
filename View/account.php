@@ -1,11 +1,10 @@
-
 <!doctype html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="accueil.css">
+    <title>Your account</title>
+    <link rel="stylesheet" href="account.css">
     <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
@@ -15,7 +14,7 @@
     <main>
         <header>
             <div class="logo">
-                <img src="cesi.png"><br><br><br><br>
+                <a href="accueil.php"><img src="cesi.png"></a><br><br><br><br>
             </div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">Menu</a>
@@ -33,22 +32,31 @@
                 </div>
               </nav>
         </header>
-    
-        <div class="titre">
-            <h1>
-                CESI'NDEED BEST PLACE TO FIND AN INTERNSHIP
-            </h1>
-        </div>
-        <div class="button_a">
-                <button id="go">Search internship</button>
-        </div>
     </main>
+    <div class="titre">
+        <h1>
+            Your account
+        </h1>
+    </div>
+    <div class="image">
+        <img src="contract.png">
+    </div>
+    <div class="button_a">
+        <button id="go_a">Your internship</button><br><br>
+        <button id="go_b">Your Wishlist</button><br><br>
+        <button id="go_b">Validation sheet</button><br><br>
+        <button id="go_d">Search internship</button><br><br>
+    </div><br>
     <footer>
         <p>
             Mentions légales <br>
         <p>
+            <p>
+                woula
+            </p>
             <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
     </footer>
     <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
     <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
