@@ -19,13 +19,13 @@ class promo {
     public function id_promo() {return $this->_id_promo;}
     public function name_promo() {return $this->_name_promo;}
 
-    public function setId_promo($id) {
+    public function setId_promotion($id) {
         $id_promo = (int) $id;
         if ($id_promo > 0)
             $this->_id_promo = $id_promo;
     }
 
-    public function setName_promo($name) {
+    public function setNom_promotion($name) {
         if (is_string($name) && strlen($name) <= 30)
             $this->_name_promo = $name;
     }

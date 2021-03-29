@@ -25,7 +25,7 @@ class role {
             $this->_id_role = $id_role;
     }
 
-    public function setName_role($name) {
+    public function setNom_role($name) {
         if (is_string($name) && strlen($name) <= 30)
             $this->_name_role = $name;
     }
