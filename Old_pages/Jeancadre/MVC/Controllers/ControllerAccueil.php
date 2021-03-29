@@ -1,7 +1,7 @@
 <?php
 require_once('Views/View.php');
 
-class ControllerAcceuil
+class ControllerAccueil
 {
     private $_articleManager;
     private $_view;
