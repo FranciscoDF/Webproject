@@ -20,9 +20,9 @@ class role {
     public function name_role() {return $this->_name_role;}
 
     public function setId_role($id) {
-        $this->_id_role = (int) $id;
-        if ($id > 0)
-            $this->_id_role = $id;
+        $id_role = (int) $id;
+        if ($id_role > 0)
+            $this->_id_role = $id_role;
     }
 
     public function setName_role($name) {

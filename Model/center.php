@@ -20,9 +20,9 @@ class center {
     public function name_center() {return $this->_name_center;}
 
     public function setId_center($id) {
-        $this->_id_center = (int) $id;
-        if ($id > 0)
-            $this->_id_center = $id;
+        $id_center = (int) $id;
+        if ($id_center > 0)
+            $this->_id_center = $id_center;
     }
 
     public function setName_center($name) {
