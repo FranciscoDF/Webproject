@@ -2,7 +2,7 @@
 
 class userManager {
     private $_co;
-
+/////////////////////////////////////// setCo ???
     public function __construct($co) {$this->setDb($co);}
 
     public function get($par, $val) {
