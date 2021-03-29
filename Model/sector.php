@@ -1,20 +1,37 @@
 <?php
 
+include 'Connexion_BDD.php';
 class sector {
-    public $sector_id;
-    public $sector_name;
-   
-   
-    function getId() {}
-    function getName() {}
+    private $_id_sector;
+    private $_name_sector;
+    
+
+    public function hydrate(array $data){
+        foreach ($data as $key => $value) {
+            $method = 'set'.ucfirst($key);
+
+            if (method_exists($this, $method))
+                $this->$method($value);
+        }
+    }
+
+
+    public function id_sector() {return $this->_id_sector;}
+    public function name_sector() {return $this->_name_sector;}
+
+    public function setId_sector($id) {
+        $this->_id_sector = (int) $id;
+        if ($id > 0)
+            $this->_id_sector = $id;
+    }
+
+    public function setName_sector($name) {
+        if (is_string($name) && strlen($name) <= 30)
+            $this->_name_sector = $name;
+    }
+    
+
 }
-
-function getRoles(){
-
-
-}
-
-
 
 
 ?>
