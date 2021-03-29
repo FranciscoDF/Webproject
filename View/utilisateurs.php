@@ -61,23 +61,6 @@
         <option value="age">Age</option>
     </select>   
     </div>
-    <?php
-    include 'connect.php';
-    include 'requete.php';
-    ?>
-    <div class=tableau>
-    <table class="table table-bordered">
-<tr>
-    <th><p class="text-error">id_utilisateur</p></th>
-    <th><p class="text-error">user_utilisateur</p></th>
-    <th><p class="text-error">mdp_utilisateur</p></th>
-    <th><p class="text-error">name_utilisateur</p></th>
-  <th><p class="text-error">surname_utilisateur</p></th>
-  <th><p class="text-error">id_role</p></th>
-  <th><p class="text-error">id_promotion</p></th>
-  <th><p class="text-error">id_centre</p></th>
-    </tr>
-<tr>
 <div class="button_a">
   <button id="go">Add</button>
   <button id="go">Update</button>
@@ -89,9 +72,6 @@
     <p>
         Mentions légales <br>
     <p>
-        <p>
-            woula
-        </p>
         <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
     </footer>
   <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
