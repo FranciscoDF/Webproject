@@ -63,7 +63,7 @@
     </div>
     <?php
     include 'connect.php';
-    include 'requete.php'
+    include 'requete.php';
     ?>
     <div class=tableau>
     <table class="table table-bordered">
