@@ -109,9 +109,6 @@ En ce poème vous donne récit !
     <p>
         Mentions légales <br>
     <p>
-        <p>
-            woula
-        </p>
         <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
       </footer>
   <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
