@@ -50,8 +50,9 @@ html{
 }
 footer{
     background-color: #343A40;
+    padding: 1vw 1vw 1px 1vw;
     position:absolute;
-   /* bottom:0;*/
+    bottom:0;
     width:100%;
 }
 footer p{
