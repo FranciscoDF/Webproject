@@ -1,40 +1,53 @@
 <?php
-require_once('Views/View.php');
+require_once('View/View.php');
 
-class ControllerUser
+class ControllerUser extends Model
 {
     private $_userManager;
-    private $_view; 
+    private $_view;
 
     public function __construct($url) {
         echo 'il faut appeler la fonction : '.$url[1];
-        if (isset($url) && count($url) > 1){
+        /*if (isset($url) && count($url) > 1){
             throw new Exception('Page introuvable');
-        }
+        }*/
 
         switch ($url[1]) {
-            case 'view' : userview();
-            case 'ajouter' : useradd();
-            case 'update' : userupdate();
-            case 'delete' : userdelete();
+            case 'view' : 
+                echo ' ici et là';
+                $this->userview();
+                break;
+            case 'ajouter' : useradd(); break;
+            case 'update' : userupdate(); break;
+            case 'delete' : userdelete(); break;
         }
     }
 
     private function userview() {
-        $this->_userManager = new userManager;
+        $yo = $this->getBdd();
+        $this->_userManager = new userManager($yo);
         $user= $this->_userManager->getList();
 
-        $this->_view = new View('User');
-        $this->_view->generate(array('user' => $userView));
+        
+
+        /*foreach  ($user as $row) {
+            $temps = $row[$i]->id_user();
+            print  'Pseudo :' . $temp ;
+            $temps = '';
+            $i++;
+        }*/
+
+        $this->_view = new Views('User');
+        $this->_view->generate(array('user' => $user));
     }
 
     private function useradd(user $user) {
-        $this->_userManager = new userManager;
+        $this->_userManager = new userManager($_bdd);
         $user= $this->_userManager->add();
     }
 
     private function userupdate(user $user){
-        $this->_userManager = new userManager;
+        $this->_userManager = new userManager($_bdd);
         $user= $this->_userManager->update();
     }
 

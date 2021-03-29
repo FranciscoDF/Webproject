@@ -45,9 +45,8 @@
     </main>
     <footer>
         <p>
-            Mentions légales <br>
+            Mentions légales<br>
         <p>
-            <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
     </footer>
     <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
     <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>

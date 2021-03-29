@@ -2,9 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title><?= $t ?></title>
-        <meta charset="utf-8">
-        <title>Users</title>
+        <title><?php $t ?></title>
         <link rel="stylesheet" href="template.css">
         <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -48,13 +46,14 @@
         </div>
       </nav>
     </header>
-    </header>
+
     <?= $content ?>
+    <?= $t ?>
     <footer>
     <p>
         Mentions légales <br>
     <p>
         <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
         <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-      </footer>
+    </footer>
 </html>

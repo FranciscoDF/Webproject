@@ -2,8 +2,8 @@
 
 class userManager {
     private $_co;
-/////////////////////////////////////// setCo ???
-    public function __construct($co) {$this->setDb($co);}
+
+    public function __construct($co) {$this->setCo($co);}
 
     public function get($par, $val) {
         $user = [];
@@ -18,11 +18,11 @@ class userManager {
 
     public function getList() {
         $user = [];
+        $query = $this->_co->query("SELECT * FROM utilisateur");
 
-        $query = $this->_co->$query("SELECT * FROM utilisateur");
-
-        while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $user = new user($data);
+        while ($data = $query->fetch(PDO::FETCH_ASSOC)) {
+            $user[] = new user($data);
+        }
         
         return $user;
     }
