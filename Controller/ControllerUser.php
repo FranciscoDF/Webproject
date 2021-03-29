@@ -23,7 +23,7 @@ class ControllerUser
 
     private function useradd(user $user) {
         $this->_userManager = new userManager;
-        $user= $this->_userManager
+        $user= $this->_userManager;
     }
 
 }
