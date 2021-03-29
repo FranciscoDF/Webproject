@@ -18,7 +18,7 @@ class ControllerUser
         $user= $this->_userManager->getList();
 
         $this->_view = new View('User');
-        $this->_view->generate(array('utiisateur' => $user));
+        $this->_view->generate(array('user' => $userView));
     }
 
 }
