@@ -43,7 +43,7 @@
     </div>
     <div class="button_a">
     <a href="stages.php"> <button id="go_a">Your internship</button><br><br></a>
-        <button id="go_b">Your Wishlist</button><br><br>
+    <a href="wishlist.php">  <button id="go_b">Your Wishlist</button><br><br></a>
         <button id="go_b">Validation sheet</button><br><br>
         <button id="go_d">Search internship</button><br><br>
     </div><br>

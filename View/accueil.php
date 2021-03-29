@@ -40,7 +40,7 @@
             </h1>
         </div>
         <div class="button_a">
-                <button id="go">Search internship</button>
+        <a href="stages.php"> <button id="go">Search internship</button></a>
         </div>
     </main>
     <footer>
