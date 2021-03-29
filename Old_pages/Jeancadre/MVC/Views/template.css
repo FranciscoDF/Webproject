@@ -41,3 +41,30 @@ footer{
 footer p{
     color:white;
 }
+.titre{
+    background-color: #343A40;
+    }
+  .titre h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    text-align: left;
+    padding: 2.6vw 1vw 2vw 1vw;
+    color: white;
+  }
+  .choose{
+    background-color: white;
+    padding :2vw 1vw 3vw 1vw;
+  }
+  .choose select{
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    padding: 1vw 10vw 1vw 1vw;
+    color:white;
+    background-color:#343A40 ;
+  }
+  .choose select:hover{
+    color:black;
+    background-color:white ;
+    transition-duration: 0.5s;
+  }
