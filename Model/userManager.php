@@ -28,7 +28,7 @@ class userManager {
     }
 
     public function delete(user $user){
-        $this->_co->exec('DELETE FROM utilisateur WHERE id ='.$perso->id());
+        $this->_co->exec('DELETE FROM utilisateur WHERE id ='.$user->id());
     }
 
     public function add(user $user) {

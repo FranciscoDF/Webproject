@@ -1,6 +1,8 @@
 <?php
+//require_once('Model.php');
 
-class user {
+class user //extends Model 
+{
     private $_id_user;
     private $_username_user;
     private $_password_user;
