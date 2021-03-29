@@ -1,6 +1,5 @@
 <?php
 
-include 'Connexion_BDD.php';
 class user {
     private $_id_user;
     private $_username_user;
@@ -31,7 +30,7 @@ class user {
     public function id_center(){return $this->_id_center;}
 
     public function setId_user($id) {
-        $this->_id_user = (int) $id;
+        $id_username = (int) $id;
         if ($id > 0)
             $this->_id_username = $id;
     }
