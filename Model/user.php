@@ -12,6 +12,11 @@ class user //extends Model
     private $_id_promo;
     private $_id_center;
 
+
+    public function __construct($data) {
+        $this->hydrate( $data);
+    }
+
     public function hydrate(array $data){
         foreach ($data as $key => $value) {
             $method = 'set'.ucfirst($key);
@@ -31,28 +36,28 @@ class user //extends Model
     public function id_promo() {return $this->_id_promo;}
     public function id_center(){return $this->_id_center;}
 
-    public function setId_user($id) {
+    public function setId_utilisateur($id) {
         $id_user = (int) $id;
         if ($id_user > 0)
             $this->_id_user = $id_user;
     }
 
-    public function setUsername_user($username) {
+    public function setUser_utilisateur($username) {
         if (is_string($username) && strlen($username) <= 30)
             $this->_username_user = $username;
     }
     
-    public function setPassword_user($password) {
+    public function setMdp_utilisateur($password) {
         if (is_string($password) && strlen($password) <= 30)
             $this->_password_user = $password;
     }
 
-    public function setFname_user($fname) {
+    public function setNom_utilisateur($fname) {
         if (is_string($fname) && strlen($fname) <= 20)
             $this->_fname_user = $fname;
     }
 
-    public function setLname_user($lname) {
+    public function setPrenom_utilisateur($lname) {
         if (is_string($lname) && strlen($lname) <= 25)
             $this->_lname_user = $lname;
     }
@@ -61,11 +66,11 @@ class user //extends Model
         $this->_id_role = (int) $id;
     }
 
-    public function setId_promo($id) {
+    public function setId_promotion($id) {
         $this->_id_promo = (int) $id;
     }
 
-    public function setId_center($id) {
+    public function setId_centre($id) {
         $this->_id_center = (int) $id;
     }
 
