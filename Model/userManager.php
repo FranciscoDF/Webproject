@@ -34,13 +34,13 @@ class userManager {
     public function add(user $user) {
         $query = $this->_co->prepare('INSERT INTO utilisateur(user_utilisateur, mdp_utilisateur, nom_utilisateur, prenom_utilisateur, id_role, id_promotion, id_centre) VALUES (:user_utilisateur, :mdp_utilisateur, :nom_utilisateur, :prenom_utilisateur, :id_role, :id_promotion, :id_centre)');
         $query->execute([
-            'user_utilisateur'=> $user->username_user();
-            'mdp_utilisateur'=> $user->password_user();
-            'mdp_utilisateur'=> $user->fname_user();
-            'mdp_utilisateur'=> $user->lname_user();
-            'mdp_utilisateur'=> $user->id_role();
-            'mdp_utilisateur'=> $user->id_promo();
-            'mdp_utilisateur'=> $user->id_center()
+            'user_utilisateur'=> $user->username_user(),
+            'mdp_utilisateur'=> $user->password_user(),
+            'nom_utilisateur'=> $user->fname_user(),
+            'prenom_utilisateur'=> $user->lname_user(),
+            'id_role'=> $user->id_role(),
+            'id_promotion'=> $user->id_promo(),
+            'id_centre'=> $user->id_center()
         ]);
     }
 
@@ -50,11 +50,11 @@ class userManager {
         $query->execute([
             'user_utilisateur'=> $user->username_user(),
             'mdp_utilisateur'=> $user->password_user(),
-            'mdp_utilisateur'=> $user->fname_user(),
-            'mdp_utilisateur'=> $user->lname_user(),
-            'mdp_utilisateur'=> $user->id_role(),
-            'mdp_utilisateur'=> $user->id_promo(),
-            'mdp_utilisateur'=> $user->id_center()
+            'nom_utilisateur'=> $user->fname_user(),
+            'prenom_utilisateur'=> $user->lname_user(),
+            'id_role'=> $user->id_role(),
+            'id_promotion'=> $user->id_promo(),
+            'id_centre'=> $user->id_center()
         ]);
     }
 
