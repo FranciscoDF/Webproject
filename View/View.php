@@ -5,7 +5,7 @@ class Views{
 
     public function __construct($action)
     {
-        $this->_file = 'Views/view'.$action.'.php';
+        $this->_file = 'View/View'.$action.'.php';
     }
 
     // GENERE ET AFFICHE LA VIEW
@@ -13,18 +13,22 @@ class Views{
     {   
         //PARTIE MAIN DE LA VUE 
         $content = $this->generateFile($this->_file, $data);
+        /*$temp = $data[1];
+        $temps = $temp->user_username();
+        print_r($temps);*/
+        
         // TEMPLATE (HEADER+FOOTER)
-        $view = $this->generateFile('views/template.php', array('t'=> $this->_t,'content' => $content));
-
+        $view = $this->generateFile('View/template.php', array('t'=> $this->_t,'content' => $content));
+        
         echo $view;
     }
     // GENERE UN FICHIER VUE ET RENVOIE LE RESUTLAT PRODUIT
     private function generateFile($file, $data)
     {
-        if(file_existe($file))
+        if(file_exists($file))
         {
             extract($data);
-
+            echo 'tu connais ?';
             ob_start(); // Mise en tempon
             
             // INCLURE LE FICHIER VUE

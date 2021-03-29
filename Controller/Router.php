@@ -32,13 +32,13 @@ class Router
             }
             else
             {
-                require_once('Controller/controllerHome.php');
-                $this->_crlt = new ControllerHome($url);
+                require_once('Controller/controllerUser.php');
+                $this->_crlt = new ControllerUser($url);
             }
         }
         catch(Exception $e) //GESTIONS DES ERREURS
         {
-            echo "catch";
+            echo " catch";
             /*$errorMsg = $e->getMessage();
             $this->_view = new Vew('Error');
             $this->_view->generate(array('errorMsg' =>$errorMsg));*/
