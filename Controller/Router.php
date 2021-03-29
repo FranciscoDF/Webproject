@@ -8,11 +8,7 @@ class Router
         try {
             // Chargement des classes automatiquement
             spl_autoload_register(function($class){
-<<<<<<< HEAD
-                require_once('models/'.$class.'.php');
-=======
                 require_once('Model/'.$class.'.php');
->>>>>>> 3b3550419ef669f68b738623535ffe484a5abbf5
             });
 
             $url = '';
