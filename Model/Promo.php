@@ -20,9 +20,9 @@ class promo {
     public function name_promo() {return $this->_name_promo;}
 
     public function setId_promo($id) {
-        $this->_id_promo = (int) $id;
-        if ($id > 0)
-            $this->_id_promo = $id;
+        $id_promo = (int) $id;
+        if ($id_promo > 0)
+            $this->_id_promo = $id_promo;
     }
 
     public function setName_promo($name) {
