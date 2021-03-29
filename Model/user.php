@@ -30,9 +30,9 @@ class user {
     public function id_center(){return $this->_id_center;}
 
     public function setId_user($id) {
-        $id_username = (int) $id;
-        if ($id > 0)
-            $this->_id_username = $id;
+        $id_user = (int) $id;
+        if ($id_user > 0)
+            $this->_id_user = $id_user;
     }
 
     public function setUsername_user($username) {
@@ -68,6 +68,7 @@ class user {
     }
 
 }
+
 /*
 function getUsers(){
 
