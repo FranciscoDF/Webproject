@@ -25,7 +25,7 @@ class permission {
             $this->_id_permission = $id_permission;
     }
 
-    public function setName_permission($name) {
+    public function setNom_permission($name) {
         if (is_string($name) && strlen($name) <= 30)
             $this->_name_permission = $name;
     }
