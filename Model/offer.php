@@ -56,17 +56,23 @@ class offer {
         if (is_string($date) && strlen($date) <= 10)
             $this->_date_offer = $date;
     }
-//////////
-    public function setId_role($id) {
-        $this->_id_role = (int) $id;
+
+    public function setDuration_offer($duration) {
+        $this->_duration_offer = (int) $duration;
     }
 
-    public function setId_promo($id) {
-        $this->_id_promo = (int) $id;
+    public function setRemu_offer($remu) {
+        $this->_remu_offer = (int) $remu;
     }
 
-    public function setId_center($id) {
-        $this->_id_center = (int) $id;
+    public function setnbPlace_offer($nb) {
+        $this->_nbPlace_offer = (int) $nb;
     }
 
+    public function setId_company($id) {
+        $this->_id_company = (int) $id;
+    }
+
+
+    ///// Ajouter les méthodes CRUD
 }
