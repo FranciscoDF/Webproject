@@ -1,10 +1,13 @@
 <?php
 
-//include 'Connexion_BDD.php';
-class center {
+
+class center extends Model{
     private $_id_center;
     private $_name_center;
     
+    public function __construct($data) {
+        $this->hydrate($data);
+    }
 
     public function hydrate(array $data){
         foreach ($data as $key => $value) {

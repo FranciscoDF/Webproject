@@ -6,15 +6,19 @@ class userManager {
     public function __construct($co) {$this->setCo($co);}
 
     public function get($par, $val) {
-        $user = [];
+        $users = [];
         $request = "SELECT * FROM utilisateur WHERE '{$par}' = '{$val}'";
         $query = $this->_co->query($request);
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $user[]= new user($data);
+            $user = new user($data);
+            $user->getRole();
+            $users[] = $user;
 
-        return $user;
+        return $users;
     }
+
+
 
     public function getList() {
         $user = [];

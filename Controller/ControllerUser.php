@@ -15,8 +15,12 @@ class ControllerUser extends Model
             case 'view' : 
                 $this->userview();
                 break;
-            case 'pageadd' : pageadd(); break;
-            case 'add' : useradd(); break;
+            case 'pageadd' : 
+                $this->pageadd(); 
+                break;
+            case 'add' : 
+                $this->useradd(); 
+                break;
             case 'pageupdate' : pageupdate(); break;
             case 'update' : userupdate(); break;
             case 'delete' : userdelete(); break;
@@ -51,6 +55,9 @@ class ControllerUser extends Model
         $user= $this->_userManager->add();
     }
 
+    /*function saveUser($_POST){
+
+    }*/
     private function userupdate(user $user){
         $this->_userManager = new userManager($_bdd);
         $user= $this->_userManager->update();

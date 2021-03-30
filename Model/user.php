@@ -1,7 +1,6 @@
 <?php
-//require_once('Model.php');
 
-class user //extends Model 
+class user extends Model 
 {
     private $_id_user;
     private $_username_user;
@@ -11,10 +10,13 @@ class user //extends Model
     private $_id_role;
     private $_id_promo;
     private $_id_center;
+    private $_name_role;
+    private $_name_promo;
+    private $_name_center;
 
 
     public function __construct($data) {
-        $this->hydrate( $data);
+        $this->hydrate($data);
     }
 
     public function hydrate(array $data){
@@ -24,6 +26,10 @@ class user //extends Model
             if (method_exists($this, $method))
                 $this->$method($value);
         }
+
+        $this->getrole();
+        $this->getpromo();
+        $this->getcenter();
     }
 
 
@@ -35,6 +41,36 @@ class user //extends Model
     public function id_role() {return $this->_id_role;}
     public function id_promo() {return $this->_id_promo;}
     public function id_center(){return $this->_id_center;}
+    public function name_role(){return $this->_name_role;}
+    public function name_promo(){return $this->_name_promo;}
+    public function name_center(){return $this->_name_center;}
+
+    public function getrole() {
+        $yo = $this->getBdd();
+        $role = new roleManager($yo);
+        $name_role = $role->getbyid($this->_id_role);
+        $name = $name_role->name_role();
+        
+        $this->_name_role = $name;
+    }
+
+    public function getpromo() {
+        $yo = $this->getBdd();
+        $promo = new promoManager($yo);
+        $name_promo = $promo->getbyid($this->_id_promo);
+        $name = $name_promo->name_promo();
+        
+        $this->_name_promo = $name;
+    }
+
+    public function getcenter() {
+        $yo = $this->getBdd();
+        $center = new centerManager($yo);
+        $name_center = $center->getbyid($this->_id_center);
+        $name = $name_center->name_center();
+        
+        $this->_name_center = $name;
+    }
 
     public function setId_utilisateur($id) {
         $id_user = (int) $id;

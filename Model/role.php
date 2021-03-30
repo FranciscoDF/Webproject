@@ -1,10 +1,13 @@
 <?php
 
-include 'Connexion_BDD.php';
-class role {
+class role extends Model
+{
     private $_id_role;
     private $_name_role;
     
+    public function __construct($data) {
+        $this->hydrate($data);
+    }
 
     public function hydrate(array $data){
         foreach ($data as $key => $value) {

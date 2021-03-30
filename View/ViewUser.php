@@ -36,9 +36,9 @@
       <td><h2><?= $user->username_user() ?></h2></td>
       <td><h2><?= $user->fname_user() ?></h2></td>
       <td><h2><?= $user->lname_user() ?></h2></td>
-      <td><h2><?php $test=$user->id_role(); switch ($test) {case '1' : echo 'Etudiant';} ?></h2></td>
-      <td><h2><?= $user->id_promo() ?></h2></td>
-      <td><h2><?= $user->id_center() ?></h2></td>
+      <td><h2><?= $user->name_role() ?></h2></td>
+      <td><h2><?= $user->name_promo() ?></h2></td>
+      <td><h2><?= $user->name_center() ?></h2></td>
       <?php endforeach; ?>
       </tr></table>
     </div>
