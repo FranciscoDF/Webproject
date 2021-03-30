@@ -15,24 +15,28 @@
 
     <table id='empTable' class='dataTable'><tr>
       <tr>
-      <th><h2>ID utilisateur</h2></th>
-      <th><h2>Nom du compte</h2></th>
-      <th><h2>Prénom</h2></th>
-      <th><h2>Nom</h2></th>
-      <th><h2>Role</h2></th>
-      <th><h2>Promotion</h2></th>
-      <th><h2>Centre</h2></th>
+      <th><h2>ID internship</h2></th>
+      <th><h2>Name</h2></th>
+      <th><h2>Description</h2></th>
+      <th><h2>Place</h2></th>
+      <th><h2>Date</h2></th>
+      <th><h2>Lengh</h2></th>
+      <th><h2>Paid</h2></th>
+      <th><h2>Free place</h2></th>
+      <th><h2>id entreprise</h2></th>
       </tr>
 
       <?php $this->_t= 'User';
       foreach($user as $user): ?>
-      <tr><td><h2><?= $user->id_user() ?></h2></td>
-      <td><h2><?= $user->username_user() ?></h2></td>
-      <td><h2><?= $user->fname_user() ?></h2></td>
-      <td><h2><?= $user->lname_user() ?></h2></td>
-      <td><h2><?php $test=$user->id_role(); switch ($test) {case '1' : echo 'Etudiant';} ?></h2></td>
-      <td><h2><?= $user->id_promo() ?></h2></td>
-      <td><h2><?= $user->id_center() ?></h2></td>
+      <tr><td><h2><?= $internship->id_internship() ?></h2></td>
+      <td><h2><?= $internship->name_internship() ?></h2></td>
+      <td><h2><?= $internship->des_internship() ?></h2></td>
+      <td><h2><?= $internship->lieu_internship() ?></h2></td>
+      <td><h2><?= $internship->date_internship() ?></h2></td>
+      <td><h2><?= $internship->duree_internship() ?></h2></td>
+      <td><h2><?= $internship->remu_internship() ?></h2></td>
+      <td><h2><?= $internship->nbPlace_internship() ?></h2></td>
+      <td><h2><?= $internship->id_entreprise() ?></h2></td>
       <?php endforeach; ?>
       </tr></table>
     </div>
