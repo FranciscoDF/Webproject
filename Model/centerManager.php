@@ -16,6 +16,15 @@ class centerManager {
         return $promo;
     }
 
+    public function getbyid($val) {
+        $query = $this->_co->query("SELECT * FROM center WHERE id_center = '{$val}'");
+        
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $center= new center($data);
+
+        return $center;
+    }
+
     public function getList() {
         $promo = [];
 
