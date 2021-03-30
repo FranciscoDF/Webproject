@@ -19,7 +19,7 @@
 
     <div>
       
-    <table id='empTable' class='display dataTable'><tr>
+    <table id='empTable' class='dataTable'><tr>
       <tr>
       <th><h2>ID utilisateur</h2></th>
       <th><h2>Nom du compte</h2></th>
@@ -28,8 +28,6 @@
       <th><h2>Role</h2></th>
       <th><h2>Promotion</h2></th>
       <th><h2>Centre</h2></th>
-      
-      
       </tr>
 
       <?php $this->_t= 'User';

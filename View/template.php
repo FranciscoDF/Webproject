@@ -53,7 +53,7 @@
     </main>
     <div class="titre">
         <h1>
-          USERS
+          USER
         </h1>
       </div>
 

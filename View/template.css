@@ -60,8 +60,6 @@ html{
 footer{
     background-color: #343A40;
     padding: 1vw 1vw 1px 1vw;
-    position:absolute;
-    bottom:0;
     width:100%;
 }
 footer p{
@@ -94,3 +92,25 @@ footer p{
     background-color:white ;
     transition-duration: 0.5s;
   }
+
+  .dataTable{
+    border-collapse: collapse;
+    min-width: 400px;
+    width: auto;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.15);
+    cursor: pointer;
+    margin: 50px auto;
+    border: 2px solid #343A40;
+  }
+
+  th, td, tr {
+    padding: 10px 15px;
+    text-align: center;
+}
+.datatable h2{
+  font-size: 25px;
+}
+
+tbody tr:nth-child(even){
+  background-color: #f3f3f3;
+}
