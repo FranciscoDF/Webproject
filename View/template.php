@@ -15,7 +15,7 @@
     <main>
     <header>
       <div class="logo">
-        <a href="accueil.php"><img src="View/cesi.png"></a><br><br><br><br>
+        <a href="http://localhost/ProjetWeb/Webproject/?url=home"><img src="View/cesi.png"></a><br><br><br><br>
       </div>
       
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -31,10 +31,10 @@
               <a class="nav-link" href="http://localhost/ProjetWeb/Webproject/?url=home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="entreprises.php">Industries</a>
+              <a class="nav-link" href="http://localhost/ProjetWeb/Webproject/?url=industries/view">Industries</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="utilisateurs.php">Users</a>
+              <a class="nav-link" href="http://localhost/ProjetWeb/Webproject/?url=user/view">Users</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="stages.php">Internship</a>
