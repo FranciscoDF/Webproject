@@ -17,7 +17,7 @@ class centerManager {
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM center WHERE id_center = '{$val}'");
+        $query = $this->_co->query("SELECT * FROM centre WHERE id_centre = '{$val}'");
         
         $data = $query->fetch(PDO::FETCH_ASSOC);
         $center= new center($data);
