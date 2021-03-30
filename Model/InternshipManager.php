@@ -34,12 +34,12 @@ class InternshipManager {
     public function add(internship $internship) {
         $query = $this->_co->prepare('INSERT INTO offre(nom_offre, description_offre, lieu_offre, date_offre, duree_offre, remu_offre, nbPlace_offre, id_entreprise) VALUES (:nom_offre, :description_offre, :lieu_offre, :date_offre, :duree_offre, :remu_offre, :nbPlace_offre, :id_entreprise)');
         $query->execute([
-            'nom_offre'=> $user->name_offre(),
-            'description_offre'=> $user->description_offre(),
-            'lieu_offre'=> $user->lieu_offre(),
-            'date_offre'=> $user->date_offre(),
-            'duree_offre'=> $user->duree_offre(),
-            'nbPlace_offre'=> $user->nbPlace_offre(),
+            'nom_offre'=> $user->name_internship(),
+            'description_offre'=> $user->des_internship(),
+            'lieu_offre'=> $user->lieu_internship(),
+            'date_offre'=> $user->date_internship(),
+            'duree_offre'=> $user->duree_internship(),
+            'nbPlace_offre'=> $user->nbPlace_internship(),
             'id_entreprise'=> $user->id_entreprise(),
         ]);
     }
