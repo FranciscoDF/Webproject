@@ -114,3 +114,16 @@ footer p{
 tbody tr:nth-child(even){
   background-color: #f3f3f3;
 }
+
+@media screen and (max-width: 1000px) {
+
+th, td, tr {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.datatable h2{
+  font-size: 15px;
+}
+ 
+  }
