@@ -41,7 +41,7 @@
       </tr></table>
     </div>
     <div class="button_a">
-      <button id="go">Add</button>
+      <button id="go"><a href='http://localhost/ProjetWeb/Webproject/?url=user/pageadd'>Add</a></button>
       <button id="go">Update</button>
       <button id="go">Delete</button>
     </div>

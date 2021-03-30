@@ -26,14 +26,14 @@ class centerManager {
     }
 
     public function getList() {
-        $promo = [];
+        $center = [];
 
-        $query = $this->_co->$query("SELECT * FROM promotion");
+        $query = $this->_co->query("SELECT * FROM centre");
 
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $promo = new promo($data);
+            $center[] = new center($data);
         
-        return $promo;
+        return $center;
     }
 
     public function setCo(PDO $co){

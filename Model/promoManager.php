@@ -28,10 +28,10 @@ class promoManager {
     public function getList() {
         $promo = [];
 
-        $query = $this->_co->$query("SELECT * FROM promotion");
+        $query = $this->_co->query("SELECT * FROM promotion");
 
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $promo = new promo($data);
+            $promo[] = new promo($data);
         
         return $promo;
     }

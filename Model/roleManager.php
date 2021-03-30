@@ -30,7 +30,7 @@ class roleManager {
     public function getList() {
         $role = [];
 
-        $query = $this->_co->$query("SELECT * FROM role");
+        $query = $this->_co->query("SELECT * FROM role");
 
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
             $role[] = new role($data);

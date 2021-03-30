@@ -46,7 +46,29 @@ class ControllerUser extends Model
     }
 
     private function pageadd(){
-        $role = new role();
+        $yo = $this->getBdd();
+
+        $temp = new roleManager($yo);
+        $role = $temp->getList();
+
+        $temp1 = new promoManager($yo);
+        $promo = $temp1->getList();
+
+        $temp2 = new centerManager($yo);
+        $center = $temp2->getList();
+
+        $test[0] = $role;
+        $test[1] = $promo;
+        $test[2] = $center;
+
+        $yes= $test[1];
+        $jp= $yes[1];
+
+        $hey= $test[0];
+        $jpp= $hey[1];
+
+        print_r($jpp->name_role());
+        print_r($jp->name_promo());
     }
 
     private function useradd(user $user) {
