@@ -11,7 +11,7 @@ class ControllerHome
             throw new Exception('Page introuvable');
         else
         $table=[];
-        $this->_view = new View('Accueil');
+        $this->_view = new Views('Home');
         $this->_view->generate($table);
 
     }
