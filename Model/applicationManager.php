@@ -28,11 +28,11 @@ class applicationManager {
     }
 
     public function delete(application $application){
-        $this->_co->exec('DELETE FROM utilisateur WHERE id ='.$application->id());
+        $this->_co->exec('DELETE FROM candidature WHERE id ='.$application->id());
     }
 //add à modifer
     public function add(application $application) {
-        $query = $this->_co->prepare('INSERT INTO candirure(nom_entreprise, lieu_entreprise, evalMoy_entreprise, nbStagiaire_entreprise, description_entreprise, id_secteur) VALUES (:nom_entreprise, :lieu_entreprise, :evalMoy_entreprise, :nbStagiaire_entreprise, :description_entreprise, :id_secteur)');
+        $query = $this->_co->prepare('INSERT INTO candidature(nom_entreprise, lieu_entreprise, evalMoy_entreprise, nbStagiaire_entreprise, description_entreprise, id_secteur) VALUES (:nom_entreprise, :lieu_entreprise, :evalMoy_entreprise, :nbStagiaire_entreprise, :description_entreprise, :id_secteur)');
         $query->execute([
             'nom_entreprise'=> $user->name_entreprise(),
             'lieu_entreprise'=> $user->lieu_entreprise(),
