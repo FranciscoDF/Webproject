@@ -9,7 +9,7 @@
         <header>
         </header>
         <main>
-            <form action="tqt.php" method="post" class="formul">
+            <form action="" method="post" class="formul">
                 <section>
                     <fieldset class="formb1">
                         <label>Id</label>
