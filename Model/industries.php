@@ -29,7 +29,7 @@ class industries {
     public function evalMoy_entreprise() {return $this->_evalMoy_entreprise;}
     public function nbStagiaire_entreprise() {return $this->_nbStagiaire_entreprise;}
     public function description_entreprise() {return $this->_description_entreprise;}
-    public function _id_secteur() {return $this->_id_secteur;}
+    public function id_secteur() {return $this->_id_secteur;}
 
     public function setId_entreprise($id) {
         $id_entreprise = (int) $id;
@@ -44,7 +44,7 @@ class industries {
     
     public function setLieu_entreprise($lieu) {
         if (is_string($lieu) && strlen($lieu) <= 30)
-            $this->_lieu_entreprise = $password;
+            $this->_lieu_entreprise = $lieu;
     }
 
     public function setEvalMoy_entreprise($evalmoy) {
@@ -59,7 +59,7 @@ class industries {
     }
 
     public function setDescription_entreprise($description) {
-        if (is_string($description) && strlen($description) <= 30)
+        if (is_string($description) && strlen($description) <= 3000)
             $this->_description_entreprise = $description;
     }
 
