@@ -41,9 +41,11 @@
       </tr></table>
     </div>
     <div class="button_a">
-      <button id="go"><a href='http://localhost/ProjetWeb/Webproject/?url=user/pageadd'>Add</a></button>
-      <button id="go">Update</button>
-      <button id="go">Delete</button>
+      <button id="adder">Add</button>
+      <button id="updater">Update</button>
+      <button id="deleter">Delete</button>
     </div>
+
+    <script src="View/ViewUser.js">
 </body>
 </html>

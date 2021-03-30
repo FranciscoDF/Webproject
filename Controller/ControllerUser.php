@@ -15,7 +15,7 @@ class ControllerUser extends Model
             case 'view' : 
                 $this->userview();
                 break;
-            case 'pageadd' : 
+            case 'formadd' : 
                 $this->pageadd(); 
                 break;
             case 'add' : 
@@ -61,14 +61,17 @@ class ControllerUser extends Model
         $test[1] = $promo;
         $test[2] = $center;
 
-        $yes= $test[1];
+        $this->_view = new Views('UserAdd');
+        $this->_view->generate(array('test' => $test));
+
+        /*$yes= $test[1];
         $jp= $yes[1];
 
         $hey= $test[0];
         $jpp= $hey[1];
 
         print_r($jpp->name_role());
-        print_r($jp->name_promo());
+        print_r($jp->name_promo());*/
     }
 
     private function useradd(user $user) {
