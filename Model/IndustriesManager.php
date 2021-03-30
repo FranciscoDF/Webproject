@@ -37,8 +37,8 @@ class industriesManager {
             'nom_entreprise'=> $user->name_entreprise(),
             'lieu_entreprise'=> $user->lieu_entreprise(),
             'evalMoy_entreprise'=> $user->evalMoy_entreprise(),
-            'nbStagiaire_entreprise'=> $user->nbStage_entreprise(),
-            'description_entreprise'=> $user->des_entreprise(),
+            'nbStagiaire_entreprise'=> $user->nbStagiaire_entreprise(),
+            'description_entreprise'=> $user->description_entreprise(),
             'id_secteur'=> $user->id_secteur(),
         ]);
     }

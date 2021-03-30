@@ -1,6 +1,5 @@
 <?php
 
-
 class center extends Model{
     private $_id_center;
     private $_name_center;

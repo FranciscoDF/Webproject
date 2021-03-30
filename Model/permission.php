@@ -1,10 +1,12 @@
 <?php
 
-include 'Connexion_BDD.php';
-class permission {
+class permission extends Model{
     private $_id_permission;
     private $_name_permission;
     
+    public function __construct($data) {
+        $this->hydrate( $data);
+    }
 
     public function hydrate(array $data){
         foreach ($data as $key => $value) {

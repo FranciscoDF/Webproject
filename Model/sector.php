@@ -1,10 +1,13 @@
 <?php
 
-include 'Connexion_BDD.php';
-class sector {
+class sector extends Model{
     private $_id_sector;
     private $_name_sector;
     
+
+    public function __construct($data) {
+        $this->hydrate( $data);
+    }
 
     public function hydrate(array $data){
         foreach ($data as $key => $value) {

@@ -1,6 +1,6 @@
 <?php
 
-class offer {
+class offer extends Model{
     private $_id_offer;
     private $_name_offer;
     private $_description_offer;
@@ -10,6 +10,10 @@ class offer {
     private $_remu_offer;
     private $_nbPlace_offer;
     private $_id_company;
+
+    public function __construct($data) {
+        $this->hydrate( $data);
+    }
 
     public function hydrate(array $data){
         foreach ($data as $key => $value) {
