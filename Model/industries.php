@@ -59,9 +59,8 @@ class industries {
     }
 
     public function setDescription_entreprise($description) {
-        if (is_string($description) && strlen($description) <= 3000)
+        if (is_string($description) && strlen($description) <= 50)
             $this->_description_entreprise = $description;
-       
     }
 
     public function setId_secteur($id) {

@@ -35,7 +35,7 @@
       <td><h2><?= $industries->lieu_entreprise() ?></h2></td>
       <td><h2><?= $industries->evalMoy_entreprise() ?></h2></td>
       <td><h2><?= $industries->nbStagiaire_entreprise() ?></h2></td>
-      <td><h2><?php $industries->description_entreprise() ?></h2></td>
+      <td><h2><?= $industries->description_entreprise() ?></h2></td>
       <td><h2><?= $industries->id_secteur() ?></h2></td>
       <?php endforeach; ?>
       </tr></table>
