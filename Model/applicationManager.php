@@ -1,38 +1,38 @@
 <?php
 
-class industriesManager {
+class applicationManager {
     private $_co;
 
     public function __construct($co) {$this->setCo($co);}
 
     public function get($par, $val) {
-        $industries = [];
-        $request = "SELECT * FROM entreprise WHERE '{$par}' = '{$val}'";
+        $application = [];
+        $request = "SELECT * FROM candidature WHERE '{$par}' = '{$val}'";
         $query = $this->_co->query($request);
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-        $industries[]= new industries($data);
+            $application[]= new application($data);
 
-        return $industries;
+        return $application;
     }
 
     public function getList() {
-        $industries = [];
-        $query = $this->_co->query("SELECT * FROM entreprise");
+        $application = [];
+        $query = $this->_co->query("SELECT * FROM candidature");
 
         while ($data = $query->fetch(PDO::FETCH_ASSOC)) {
-            $industries[] = new industries($data);
+            $application[] = new application($data);
         }
         
-        return $industries;
+        return $application;
     }
 
-    public function delete(industries $industries){
-        $this->_co->exec('DELETE FROM  WHERE id ='.$industries->id());
+    public function delete(application $application){
+        $this->_co->exec('DELETE FROM utilisateur WHERE id ='.$application->id());
     }
-
-    public function add(industries $industries) {
-        $query = $this->_co->prepare('INSERT INTO entreprise(nom_entreprise, lieu_entreprise, evalMoy_entreprise, nbStagiaire_entreprise, description_entreprise, id_secteur) VALUES (:nom_entreprise, :lieu_entreprise, :evalMoy_entreprise, :nbStagiaire_entreprise, :description_entreprise, :id_secteur)');
+//add à modifer
+    public function add(application $application) {
+        $query = $this->_co->prepare('INSERT INTO candirure(nom_entreprise, lieu_entreprise, evalMoy_entreprise, nbStagiaire_entreprise, description_entreprise, id_secteur) VALUES (:nom_entreprise, :lieu_entreprise, :evalMoy_entreprise, :nbStagiaire_entreprise, :description_entreprise, :id_secteur)');
         $query->execute([
             'nom_entreprise'=> $user->name_entreprise(),
             'lieu_entreprise'=> $user->lieu_entreprise(),
