@@ -7,11 +7,7 @@
 </head>
 
 <body>
-<div class="titre">
-      <h1>
-        USERS
-      </h1>
-    </div>
+    
     <div class="choose">
       <select name="sort" id="sort-by">
         <option value="">Sort by</option>
@@ -48,6 +44,10 @@
       <?php endforeach; ?>
       </tr></table>
     </div>
-    <p></p>
+    <div class="button_a">
+      <button id="go">Add</button>
+      <button id="go">Update</button>
+      <button id="go">Delete</button>
+    </div>
 </body>
 </html>

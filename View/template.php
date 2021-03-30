@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title><?php $t ?></title>
+        <title><?= $t ?></title>
         <link rel="stylesheet" href="View/template.css">
         <link rel="stylesheet" href="View/assets/vendors/bootstrap/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,10 +10,14 @@
         <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
     </head>
+    
+    
+    <main>
     <header>
       <div class="logo">
         <a href="accueil.php"><img src="View/cesi.png"></a><br><br><br><br>
       </div>
+      
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Menu</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -46,9 +50,16 @@
         </div>
       </nav>
     </header>
+    </main>
+    <div class="titre">
+        <h1>
+          USERS
+        </h1>
+      </div>
+
 
     <?= $content ?>
-    <?= $t ?>
+
     <footer>
     <p>
         Mentions légales <br>
@@ -56,4 +67,6 @@
         <script src="View/assets/vendors/jquery/jquery-3.5.1.min.js"></script>
         <script src="View/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     </footer>
+
+
 </html>

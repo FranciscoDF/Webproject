@@ -7,14 +7,12 @@ class ControllerUser extends Model
     private $_view;
 
     public function __construct($url) {
-        echo 'il faut appeler la fonction : '.$url[1];
         /*if (isset($url) && count($url) > 1){
             throw new Exception('Page introuvable');
         }*/
 
         switch ($url[1]) {
             case 'view' : 
-                echo ' ici et là';
                 $this->userview();
                 break;
             case 'ajouter' : useradd(); break;

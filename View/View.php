@@ -28,7 +28,6 @@ class Views{
         if(file_exists($file))
         {
             extract($data);
-            echo 'tu connais ?';
             ob_start(); // Mise en tempon
             
             // INCLURE LE FICHIER VUE

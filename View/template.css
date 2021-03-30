@@ -4,6 +4,11 @@
     height: 70px;
 }
 
+.logo {
+  background-color: #343A40;
+}
+
+
 .image img{
     float: right;
     width: 300px;
