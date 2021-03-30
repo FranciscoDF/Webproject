@@ -7,9 +7,9 @@ class ControllerHome
 
     public function __construct($url)
     {
-        if (isset($url) && count($url) > 1)
+        /*if (isset($url) && count($url) > 1)
             throw new Exception('Page introuvable');
-        else
+        else*/
         $table=[];
         $this->_view = new Views('Home');
         $this->_view->generate($table);

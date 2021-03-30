@@ -3,17 +3,14 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="accueil.css">
-    <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="View/accueil.css">
+    <link rel="stylesheet" href="View/template.css">
 </head>
 
 <body>
     <main>
-        <header>
+        <!--<header>
             <div class="logo">
                 <img src="cesi.png"><br><br><br><br>
             </div>
@@ -32,13 +29,9 @@
                   </div>
                 </div>
               </nav>
-        </header>
+        </header>-->
     
-        <div class="titre">
-            <h1>
-                CESI'NDEED BEST PLACE TO FIND AN INTERNSHIP
-            </h1>
-        </div>
+        <?php $this->_t=  "CESI'NDEED BEST PLACE TO FIND AN INTERNSHIP"?>
         <div class="button_a">
         <a href="stages.php"> <button id="go">Search internship</button></a>
         </div>
@@ -48,6 +41,6 @@
             Mentions légales<br>
         <p>
     </footer>
-    <script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
-    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--<script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
+    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 </body>

@@ -53,7 +53,7 @@
     </main>
     <div class="titre">
         <h1>
-          USER
+          <?= $t?>
         </h1>
       </div>
 
