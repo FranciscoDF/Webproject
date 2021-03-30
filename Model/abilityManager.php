@@ -1,39 +1,39 @@
 <?php
 
-class sectorManager {
+class abilityManager {
     private $_co;
 
     public function __construct($co) {$this->setCo($co);}
 
     public function get($par, $val) {
-        $sector = [];
-        $request = "SELECT * FROM secteur WHERE '{$par}' = '{$val}'";
+        $ability = [];
+        $request = "SELECT * FROM competence WHERE '{$par}' = '{$val}'";
         $query = $this->_co->query($request);
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $sector[]= new sector($data);
+            $ability[]= new ability($data);
 
-        return $sector;
+        return $ability;
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM secteur WHERE id_secteur = '{$val}'");
+        $query = $this->_co->query("SELECT * FROM competence WHERE id_competence = '{$val}'");
         
         $data = $query->fetch(PDO::FETCH_ASSOC);
-        $sector= new sector($data);
+        $ability= new ability($data);
 
-        return $sector;
+        return $ability;
     }
 
     public function getList() {
-        $sector = [];
+        $ability = [];
 
-        $query = $this->_co->$query("SELECT * FROM secteur");
+        $query = $this->_co->$query("SELECT * FROM competence");
 
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $sector = new sector($data);
+            $ability = new ability($data);
         
-        return $sector;
+        return $ability;
     }
 
     public function setCo(PDO $co){

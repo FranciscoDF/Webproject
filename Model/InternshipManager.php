@@ -16,6 +16,15 @@ class InternshipManager {
         return $internship;
     }
 
+    public function getbyid($val) {
+        $query = $this->_co->query("SELECT * FROM offre WHERE id_offre = '{$val}'");
+        
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $internship= new internship($data);
+
+        return $internship;
+    }
+
     public function getList() {
         $internship = [];
         $query = $this->_co->query("SELECT * FROM offre");
