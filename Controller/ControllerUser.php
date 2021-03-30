@@ -15,7 +15,9 @@ class ControllerUser extends Model
             case 'view' : 
                 $this->userview();
                 break;
-            case 'ajouter' : useradd(); break;
+            case 'pageadd' : pageadd(); break;
+            case 'add' : useradd(); break;
+            case 'pageupdate' : pageupdate(); break;
             case 'update' : userupdate(); break;
             case 'delete' : userdelete(); break;
         }
@@ -39,8 +41,13 @@ class ControllerUser extends Model
         $this->_view->generate(array('user' => $user));
     }
 
+    private function pageadd(){
+        $role = new role();
+    }
+
     private function useradd(user $user) {
-        $this->_userManager = new userManager($_bdd);
+        $yo = $this->getBdd();
+        $this->_userManager = new userManager($yo);
         $user= $this->_userManager->add();
     }
 
