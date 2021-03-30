@@ -10,8 +10,8 @@ document.getElementById('updater').onclick = function() {
 //////////////////Rajouter l'url de la page update dans la fonction assign
 }
 
-document.getElementById('url de la page delete').onclick = function() {
+document.getElementById('deleter').onclick = function() {
     
-    document.location.assign("");
+    document.location.assign("url de la page delete");
 //////////////////Rajouter l'url de la page delete dans la fonction assign
 }
