@@ -3,7 +3,7 @@
 class sectorManager {
     private $_co;
 
-    public function __construct($co) {$this->setDb($co);}
+    public function __construct($co) {$this->setCo($co);}
 
     public function get($par, $val) {
         $sector = [];
