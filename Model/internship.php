@@ -38,6 +38,7 @@ class internship //extends Model
     public function nbPlace_internship(){return $this->_nbPlace_internship;}
     public function id_entreprise(){return $this->_id_entreprise;}
 
+
     public function setId_offre($id) {
         $id_internship = (int) $id;
         if ($id_internship > 0)
