@@ -9,7 +9,7 @@ class internship //extends Model
     private $_lieu_internship;
     private $_date_internship;
     private $_duree_internship;
-    private $_remu_intership;
+    private $_remu_internship;
     private $_nbPlace_internship;
     private $_id_entreprise;
 
@@ -34,53 +34,54 @@ class internship //extends Model
     public function lieu_internship() {return $this->_lieu_internship;}
     public function date_internship() {return $this->_date_internship;}
     public function duree_internship() {return $this->_duree_internship;}
-    public function remu_intership() {return $this->_remu_intership;}
+    public function remu_internship() {return $this->_remu_internship;}
     public function nbPlace_internship(){return $this->_nbPlace_internship;}
     public function id_entreprise(){return $this->_id_entreprise;}
 
-    public function setId_internship($id) {
+    public function setId_offre($id) {
         $id_internship = (int) $id;
         if ($id_internship > 0)
-            $this->_id_internship = $id_industries;
+            $this->_id_internship = $id_internship;
     }
 
-    public function setName_internship($name) {
+    public function setNom_offre($name) {
         if (is_string($name) && strlen($name) <= 30)
             $this->_name_internship= $name;
     }
     
-    public function setDes_internship($des) {
+    public function setDescription_offre($des) {
         if (is_string($des) && strlen($des) <= 30)
             $this->_des_internship = $des;
     }
 
-    public function setLieu_internship($lieu) {
+    public function setLieu_offre($lieu) {
         if (is_string($lieu) && strlen($lieu) <= 20)
             $this->_lieu_internship = $lieu;
     }
 
-    public function setDate_internship($date) {
+    public function setDate_offre($date) {
         if (is_string($date) && strlen($date) <= 25)
             $this->_date_internship = $date;
     }
 
-    public function setDuree_internship($duree) {
+    public function setDuree_offre($duree) {
         if (is_string($duree) && strlen($duree) <= 25)
             $this->_duree_internship = $duree;
     }
 
-    public function setRemu_internship($remu) {
-        if (is_string($remu) && strlen($remu) <= 25)
-            $this->_remu_intership = $remu;
+    public function setRemu_offre($remu) {
+        $this->_remu_internship = (float) $remu;
     }
 
-    public function setPlace_internship($place) {
+    public function setNbPlace_offre($place) {
         if (is_string($place) && strlen($place) <= 25)
             $this->_nbPlace_internship = $place;
     }
 
     public function setId_entreprise($id) {
-        $this->_id_entreprise = (int) $id;
+        $id_entreprise = (int) $id;
+        if ($id_entreprise > 0)
+            $this->_id_entreprise = $id_entreprise;
     }
 
 }

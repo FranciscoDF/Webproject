@@ -1,10 +1,5 @@
 <html>
 <body>
-<div class="titre">
-      <h1>
-        Industries
-      </h1>
-    </div>
     <div class="choose">
       <select name="sort" id="sort-by">
         <option value=""><p>Sort by</p></option>
@@ -26,8 +21,8 @@
       <th><h2>id entreprise</h2></th>
       </tr>
 
-      <?php $this->_t= 'User';
-      foreach($user as $user): ?>
+      <?php $this->_t= 'Internship';
+      foreach($internship as $internship): ?>
       <tr><td><h2><?= $internship->id_internship() ?></h2></td>
       <td><h2><?= $internship->name_internship() ?></h2></td>
       <td><h2><?= $internship->des_internship() ?></h2></td>
