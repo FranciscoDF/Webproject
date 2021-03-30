@@ -16,6 +16,15 @@ class permissionManager {
         return $permission;
     }
 
+    public function getbyid($val) {
+        $query = $this->_co->query("SELECT * FROM premission WHERE id_permission = '{$val}'");
+        
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $permission= new permission($data);
+
+        return $permission;
+    }
+
     public function getList() {
         $permission = [];
 

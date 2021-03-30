@@ -16,6 +16,15 @@ class industriesManager {
         return $user;
     }
 
+    public function getbyid($val) {
+        $query = $this->_co->query("SELECT * FROM entreprise WHERE id_entreprise = '{$val}'");
+        
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $industries= new industries($data);
+
+        return $industries;
+    }
+
     public function getList() {
         $industries = [];
         $query = $this->_co->query("SELECT * FROM entreprise");
