@@ -1,7 +1,7 @@
 <?php
 //require_once('Model.php');
 
-class internship //extends Model 
+class internship extends Model
 {
     private $_id_internship;
     private $_name_internship;

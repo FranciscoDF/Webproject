@@ -1,6 +1,6 @@
 <?php
 
-class industries {
+class industries extends Model{
     private $_id_entreprise;
     private $_nom_entreprise;
     private $_lieu_entreprise;

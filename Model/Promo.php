@@ -1,6 +1,5 @@
 <?php
 
-include 'Connexion_BDD.php';
 class promo {
     private $_id_promo;
     private $_name_promo;
