@@ -9,7 +9,6 @@ class industries extends Model{
     private $_description_entreprise;
     private $_id_secteur;
 
-
     public function __construct($data) {
         $this->hydrate( $data);
     }
@@ -66,5 +65,4 @@ class industries extends Model{
     public function setId_secteur($id) {
         $this->_id_secteur = (int) $id;
     }
-
 }

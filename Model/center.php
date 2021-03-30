@@ -17,7 +17,6 @@ class center extends Model{
         }
     }
 
-
     public function id_center() {return $this->_id_center;}
     public function name_center() {return $this->_name_center;}
 
@@ -31,9 +30,5 @@ class center extends Model{
         if (is_string($name) && strlen($name) <= 30)
             $this->_name_center = $name;
     }
-    
-
 }
 
-
-?>
