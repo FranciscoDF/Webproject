@@ -32,8 +32,8 @@ class Router
             }
             else
             {
-                require_once('Controller/controllerUser.php');
-                $this->_crlt = new ControllerUser($url);
+                require_once('Controller/ControllerHome.php');
+                $this->_crlt = new ControllerHome($url);
             }
         }
         catch(Exception $e) //GESTIONS DES ERREURS
