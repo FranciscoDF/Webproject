@@ -3,7 +3,7 @@
 class centerManager {
     private $_co;
 
-    public function __construct($co) {$this->setDb($co);}
+    public function __construct($co) {$this->setCo($co);}
 
     public function get($par, $val) {
         $center = [];
@@ -14,6 +14,15 @@ class centerManager {
             $promo[]= new promo($data);
 
         return $promo;
+    }
+
+    public function getbyid($val) {
+        $query = $this->_co->query("SELECT * FROM center WHERE id_center = '{$val}'");
+        
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $center= new center($data);
+
+        return $center;
     }
 
     public function getList() {
