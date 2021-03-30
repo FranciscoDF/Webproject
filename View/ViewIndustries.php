@@ -31,11 +31,11 @@
 
       <?php $this->_t= 'Industries';
       foreach($industries as $industries): ?>
-      <tr><td><h2><?= $industries->name_entreprise() ?></h2></td>
+      <tr><td><h2><?= $industries->nom_entreprise() ?></h2></td>
       <td><h2><?= $industries->lieu_entreprise() ?></h2></td>
       <td><h2><?= $industries->evalMoy_entreprise() ?></h2></td>
-      <td><h2><?= $industries->nbStage_entreprise() ?></h2></td>
-      <td><h2><?php $test=$industries->des_entreprise(); switch ($test) {case '1' : echo 'Etudiant';} ?></h2></td>
+      <td><h2><?= $industries->nbStagiaire_entreprise() ?></h2></td>
+      <td><h2><?php $industries->description_entreprise() ?></h2></td>
       <td><h2><?= $industries->id_secteur() ?></h2></td>
       <?php endforeach; ?>
       </tr></table>
