@@ -1,39 +1,39 @@
 <?php
 
-class sectorManager {
+class stepManager {
     private $_co;
 
     public function __construct($co) {$this->setCo($co);}
 
     public function get($par, $val) {
-        $sector = [];
-        $request = "SELECT * FROM secteur WHERE '{$par}' = '{$val}'";
+        $step = [];
+        $request = "SELECT * FROM etapes WHERE '{$par}' = '{$val}'";
         $query = $this->_co->query($request);
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $sector[]= new sector($data);
+            $step[]= new step($data);
 
-        return $sector;
+        return $step;
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM secteur WHERE id_secteur = '{$val}'");
+        $query = $this->_co->query("SELECT * FROM etapes WHERE id_etapes = '{$val}'");
         
         $data = $query->fetch(PDO::FETCH_ASSOC);
-        $sector= new sector($data);
+        $step= new step($data);
 
-        return $sector;
+        return $step;
     }
 
     public function getList() {
-        $sector = [];
+        $step = [];
 
-        $query = $this->_co->$query("SELECT * FROM secteur");
+        $query = $this->_co->$query("SELECT * FROM etapes");
 
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $sector = new sector($data);
+            $step = new step($data);
         
-        return $sector;
+        return $step;
     }
 
     public function setCo(PDO $co){

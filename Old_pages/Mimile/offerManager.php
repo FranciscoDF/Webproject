@@ -1,5 +1,11 @@
 <?php
 
+
+
+
+//////////////////////////////////// Obsolète car même table que internship
+
+
 class offerManager {
     private $_co;
 
@@ -12,6 +18,15 @@ class offerManager {
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
             $offer[]= new offer($data);
+
+        return $offer;
+    }
+
+    public function getbyid($val) {
+        $query = $this->_co->query("SELECT * FROM offre WHERE id_offre = '{$val}'");
+        
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $offer= new offer($data);
 
         return $offer;
     }

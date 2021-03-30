@@ -1,5 +1,12 @@
 <?php
 
+
+
+
+
+
+
+//////////////////////////////////// Obsolète car même table que internship
 class offer extends Model{
     private $_id_offer;
     private $_name_offer;
