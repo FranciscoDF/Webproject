@@ -7,7 +7,7 @@ class industriesManager {
 
     public function get($par, $val) {
         $user = [];
-        $request = "SELECT * FROM utilisateur WHERE '{$par}' = '{$val}'";
+        $request = "SELECT * FROM entreprise WHERE '{$par}' = '{$val}'";
         $query = $this->_co->query($request);
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
