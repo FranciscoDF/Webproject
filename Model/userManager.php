@@ -19,7 +19,15 @@ class userManager {
         return $users;
     }
 
+    public function getbyid($val) {
+        $query = $this->_co->prepare("SELECT * FROM utilisateur WHERE id_utilisateur = '{$val}'");
+        $query->execute();
 
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $user= new user($data);
+
+        return $user;
+    }
 
     public function getList() {
         $user = [];
@@ -53,8 +61,9 @@ class userManager {
 
 
     public function update(user $user) {
-        $query = $this->_co->prepare('UPDATE utilisateur SET user_utilisateur = :user_utilisateur, mdp_utilisateur = :mdp_utilisateur, nom_utilisateur = :nom_utilisateur, prenom_utilisateur = :prenom_utilisateur, id_role = :id_role, id_promotion = :id_promotion, id_centre = :id_centre ');
+        $query = $this->_co->prepare('UPDATE utilisateur SET user_utilisateur = :user_utilisateur, mdp_utilisateur = :mdp_utilisateur, nom_utilisateur = :nom_utilisateur, prenom_utilisateur = :prenom_utilisateur, id_role = :id_role, id_promotion = :id_promotion, id_centre = :id_centre WHERE id_utilisateur = :id_utilisateur');
         $result = $query->execute([
+            'id_utilisateur'=> $user->id_user(),
             'user_utilisateur'=> $user->username_user(),
             'mdp_utilisateur'=> $user->password_user(),
             'nom_utilisateur'=> $user->fname_user(),
