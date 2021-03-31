@@ -1,23 +1,20 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="View/companies.css"/>
     </head>
-    <body class="corps">
-        <header>
-        </header>
-            <form action="./?url=user/delete" method="post" class="formul">
-                <section>
-                    <fieldset class="formb1">
-                    <label> ID User</label>
-                        <input type="text" class="textbox" id="ID" name="user"/>
-                    </fieldset>
-                        <div class="button_a">
-                            <button id="go_d">Delete</button>
-                        </div>
-                    </fieldset>
-                </section>
-            </form>
-    </body>
+<body>
+    
+
+<h1>
+<?php 
+
+
+echo $message;
+
+?>
+</h1>
+
+
+</body>
 </html>

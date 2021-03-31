@@ -27,7 +27,9 @@ class ControllerUser extends Model
             case 'update' :
                 $this->userupdate(); 
                 break;
-            case 'delete' : userdelete(); break;
+            case 'delete' : 
+                $this->userdelete();
+                break;
         }
     }
 
@@ -102,6 +104,25 @@ class ControllerUser extends Model
         $this->_view = new Views('UserUpdate');
         $this->_view->generate(array('test' => $test));
     }
+
+    private function userdelete(){
+      
+        $yo = $this->getBdd();
+
+        $temp = new userManager($yo);
+        $user = $temp->getbyid($_POST['id_utilisateur']);
+        $result = $temp->delete($user);
+        if ($result){
+            $message = 'Your user has been deleted';
+        } else {
+            $message = 'Sorry, a problem occured during the process. Please try again !';
+        }
+
+        $this->_view = new Views('UserDelete');
+        $this->_view->generate(array('message' => $message));
+        
+    }
+
 
     private function useradd() {
         
