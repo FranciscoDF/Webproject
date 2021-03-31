@@ -15,4 +15,4 @@ class ControllerHome
         $this->_view->generate($table);
 
     }
-}
+} 
