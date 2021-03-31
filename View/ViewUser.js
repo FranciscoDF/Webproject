@@ -15,3 +15,10 @@ document.getElementById('deleter').onclick = function() {
     document.location.assign("url de la page delete");
 //////////////////Rajouter l'url de la page delete dans la fonction assign
 }
+
+document.getElementById('validToUser').onclick = function() {
+
+    document.location.assign("http://localhost:8080/ProjetWeb/Webproject/?url=user/formadd");
+
+
+}
