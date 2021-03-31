@@ -74,10 +74,14 @@ class ControllerUser extends Model
         print_r($jp->name_promo());*/
     }
 
-    private function useradd(user $user) {
+    private function useradd() {
+        
+        if(isset($_POST['submit'])){
+        $temp = new user($_POST);
         $yo = $this->getBdd();
         $this->_userManager = new userManager($yo);
-        $user= $this->_userManager->add();
+        $user= $this->_userManager->add($temp);
+
     }
 
     /*function saveUser($_POST){

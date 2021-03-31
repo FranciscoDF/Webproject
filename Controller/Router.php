@@ -20,6 +20,7 @@ class Router
                 $controllerClass = "Controller".$controller;
                 $controllerFile ="Controller/".$controllerClass.".php";
 
+
                 if(file_exists($controllerFile))
                 {
                     require_once($controllerFile);
