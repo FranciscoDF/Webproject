@@ -1,4 +1,8 @@
+<DOCTYPE html>
 <html>
+<head>
+        <meta charset="utf-8">
+    </head>
 <body>
     
 
@@ -10,8 +14,10 @@ echo $message;
 
 ?>
 </h1>
-<button id="validToUser">Return onto the users page</button>
+<div class="button_a">
+    <button id="valid">return to add page</button>
+</div>
 
-<script src="View/ViewUser.js">
+<script src="View/ViewUserAddValid.js">
 </body>
 </html>
