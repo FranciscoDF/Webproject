@@ -97,6 +97,7 @@ class ControllerUser extends Model
     /*function saveUser($_POST){
 
     }*/
+    
     private function userupdate(user $user){
         $this->_userManager = new userManager($_bdd);
         $user= $this->_userManager->update();
