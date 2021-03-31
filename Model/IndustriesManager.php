@@ -8,7 +8,8 @@ class industriesManager {
     public function get($par, $val) {
         $industries = [];
         $request = "SELECT * FROM entreprise WHERE '{$par}' = '{$val}'";
-        $query = $this->_co->query($request);
+        $query = $this->_co->prepare($request);
+        $query->execute();
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
         $industries[]= new industries($data);
@@ -17,8 +18,9 @@ class industriesManager {
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM entreprise WHERE id_entreprise = '{$val}'");
-        
+        $query = $this->_co->prepare("SELECT * FROM entreprise WHERE id_entreprise = '{$val}'");
+        $query->execute();
+
         $data = $query->fetch(PDO::FETCH_ASSOC);
         $industries= new industries($data);
 

@@ -8,8 +8,9 @@ class applicationManager {
     public function get($par, $val) {
         $application = [];
         $request = "SELECT * FROM candidature WHERE '{$par}' = '{$val}'";
-        $query = $this->_co->query($request);
-        
+        $query = $this->_co->prepare($request);
+        $query->execute();
+
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
             $application[]= new application($data);
 
@@ -17,7 +18,8 @@ class applicationManager {
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM candidature WHERE id_candidature = '{$val}'");
+        $query = $this->_co->prepare("SELECT * FROM candidature WHERE id_candidature = '{$val}'");
+        $query->execute();
         
         $data = $query->fetch(PDO::FETCH_ASSOC);
         $application= new application($data);

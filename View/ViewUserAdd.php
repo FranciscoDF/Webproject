@@ -24,15 +24,15 @@
                 <section>
                     <fieldset class="formb2">
                         <label>Role</label>
-                            <div class="choose">
-                                <?php $role = $test[0];?>
-                                <select name="id_role" id="id_role">
+                        <div class="choose">
+                            <?php $role = $test[0];?>
+                            <select name="id_role" id="id_role">
                                 <option value="nothing">Choose a role</option>
-                                    <?php foreach($role as $role): ?>
-                                    <option value="<?= $role->id_role()?>"><?= $role->name_role() ?></option>
-                                    <?php endforeach; ?>
-                                </select>   
-                            </div>  
+                                <?php foreach($role as $role): ?>
+                                <option value="<?= $role->id_role()?>"><?= $role->name_role() ?></option>
+                                <?php endforeach; ?>
+                            </select>   
+                        </div>  
                         <label>Promotion</label>
                         <div class="choose">
                             <?php $this->_t= 'Add User';
