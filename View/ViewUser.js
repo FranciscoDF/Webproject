@@ -6,7 +6,7 @@ document.getElementById('adder').onclick = function() {
 
 document.getElementById('updater').onclick = function() {
     
-    document.location.assign("url de la page update");
+    document.location.assign("http://localhost/ProjetWeb/Webproject/?url=user/formupdate");
 //////////////////Rajouter l'url de la page update dans la fonction assign
 }
 

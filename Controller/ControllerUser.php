@@ -21,8 +21,12 @@ class ControllerUser extends Model
             case 'add' : 
                 $this->useradd(); 
                 break;
-            case 'pageupdate' : pageupdate(); break;
-            case 'update' : userupdate(); break;
+            case 'formupdate' : 
+                $this->pageupdate(); 
+                break;
+            case 'update' :
+                $this->userupdate(); 
+                break;
             case 'delete' : userdelete(); break;
         }
     }
@@ -74,6 +78,31 @@ class ControllerUser extends Model
         print_r($jp->name_promo());*/
     }
 
+    private function pageupdate(){
+        $yo = $this->getBdd();
+
+
+        $temp = new roleManager($yo);
+        $role = $temp->getList();
+
+        $temp1 = new promoManager($yo);
+        $promo = $temp1->getList();
+
+        $temp2 = new centerManager($yo);
+        $center = $temp2->getList();
+
+        $temp3 = new userManager($yo);
+        $user = $temp3->getbyid($_POST['id_utilisateur']);
+
+        $test[0] = $role;
+        $test[1] = $promo;
+        $test[2] = $center;
+        $test[3] = $user;
+
+        $this->_view = new Views('UserUpdate');
+        $this->_view->generate(array('test' => $test));
+    }
+
     private function useradd() {
         
         if(isset($_POST['submit'])){
@@ -97,9 +126,21 @@ class ControllerUser extends Model
     /*function saveUser($_POST){
 
     }*/
-    private function userupdate(user $user){
-        $this->_userManager = new userManager($_bdd);
-        $user= $this->_userManager->update();
+    private function userupdate(){
+        if(isset($_POST['submit'])){
+            $temp = new user($_POST);
+            $yo = $this->getBdd();
+            $this->_userManager = new userManager($yo);
+            $user= $this->_userManager->update($temp);
+
+            if ($user){
+                $message = 'Your user has been updated';
+            } else {
+                $message = 'Sorry, a problem occured during the process. Please try again !';
+            }
+        }
+        $this->_view = new Views('UserUpdateValid');
+        $this->_view->generate(array('message' => $message));
     }
 
 }
