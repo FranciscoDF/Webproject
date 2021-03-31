@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="Companies.css"/>
+        <link rel="stylesheet" type="text/css" href="View/companies.css"/>
     </head>
     <body class="corps">
         <header>
