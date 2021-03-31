@@ -2,9 +2,14 @@
 <body>
     
 
-<h1>TEST </h1>
+<h1>
+<?php 
 
 
+echo $message;
+
+?>
+</h1>
 
     
 </body>
