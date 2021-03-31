@@ -82,11 +82,12 @@ class ControllerUser extends Model
         $this->_userManager = new userManager($yo);
         $user= $this->_userManager->add($temp);
 
-    }
+    }}
 
     /*function saveUser($_POST){
 
     }*/
+    
     private function userupdate(user $user){
         $this->_userManager = new userManager($_bdd);
         $user= $this->_userManager->update();
