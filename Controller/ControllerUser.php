@@ -77,10 +77,20 @@ class ControllerUser extends Model
     private function useradd() {
         
         if(isset($_POST['submit'])){
-        $temp = new user($_POST);
-        $yo = $this->getBdd();
-        $this->_userManager = new userManager($yo);
-        $user= $this->_userManager->add($temp);
+            $temp = new user($_POST);
+            $yo = $this->getBdd();
+            $this->_userManager = new userManager($yo);
+            $user= $this->_userManager->add($temp);
+
+            if ($user){
+                $message = 'Your user has been added';
+            } else {
+                $message = 'Sorry, a problem occured during the process. Please try again !'
+            }
+        }
+
+        $this->_view = new Views('UserAddValid');
+        $this->_view->generate(array('message' => $message));
 
     }
 
