@@ -150,6 +150,7 @@ th, td, tr {
 .formb1{
     border: none;
     margin-top: 50%;
+    margin-left: 5%;
 }
 .formb2{
     border: none;
@@ -196,7 +197,7 @@ th, td, tr {
 	font-family: 'Muli', sans-serif;
 	width: 100%;
 	transition: 0.1s ease-in;
-  margin-left: 20%;
+  
     
 }
 .formb2 input{
