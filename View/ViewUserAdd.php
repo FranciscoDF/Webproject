@@ -25,7 +25,7 @@
                     <fieldset class="formb2">
                         <label>Promotion</label>
                         <div class="choose">
-                            <?php $this->_t= 'Add user';
+                            <?php $this->_t= 'Add User';
                                 $promo = $test[1];?>
                             <select name="promo" id="promo">
                                 <option value="nothing">Choose a promotion</option>

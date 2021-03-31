@@ -1,6 +1,6 @@
 document.getElementById('adder').onclick = function() {
     
-    document.location.assign("url de la page add");
+    document.location.assign("http://localhost/ProjetWeb/Webproject/?url=user/formadd");
 //////////////////Rajouter l'url de la page add dans la fonction assign
 }
 
