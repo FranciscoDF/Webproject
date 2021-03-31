@@ -85,14 +85,14 @@ class ControllerUser extends Model
             if ($user){
                 $message = 'Your user has been added';
             } else {
-                $message = 'Sorry, a problem occured during the process. Please try again !'
+                $message = 'Sorry, a problem occured during the process. Please try again !';
             }
         }
 
         $this->_view = new Views('UserAddValid');
         $this->_view->generate(array('message' => $message));
 
-    }}
+    }
 
     /*function saveUser($_POST){
 
