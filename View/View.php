@@ -17,7 +17,7 @@ class Views{
         $temps = $temp->user_username();
         print_r($temps);*/
         
-        // TEMPLATE (HEADER+FOOTER)
+        // TEMPLATE (HEADER+FOOTER css FORM)
         $view = $this->generateFile('View/template.php', array('t'=> $this->_t,'content' => $content));
         
         echo $view;
