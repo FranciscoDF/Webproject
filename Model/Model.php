@@ -20,7 +20,7 @@ abstract class Model //revoir classe abstraite
     /*protected function getAll($table, $obj)
     {
         $var = [];
-        $req = self::$_dbb->prepare(' SELECT * FROM ' .$table.' ORDER BY id desc ' );
+        $req = self::$_bdd->prepare(' SELECT * FROM ' .$table.' ORDER BY id desc ' );
         $reque->excute();
         while($data = $req->fetch(PDO::FETCH_ASSOC))
         {
