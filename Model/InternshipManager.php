@@ -8,7 +8,8 @@ class InternshipManager {
     public function get($par, $val) {
         $internship = [];
         $request = "SELECT * FROM offre WHERE '{$par}' = '{$val}'";
-        $query = $this->_co->query($request);
+        $query = $this->_co->prepare($request);
+        $query->execute();
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
             $internship[]= new internship($data);
@@ -17,8 +18,9 @@ class InternshipManager {
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM offre WHERE id_offre = '{$val}'");
-        
+        $query = $this->_co->prepare("SELECT * FROM offre WHERE id_offre = '{$val}'");
+        $query->execute();
+
         $data = $query->fetch(PDO::FETCH_ASSOC);
         $internship= new internship($data);
 

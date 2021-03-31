@@ -8,7 +8,8 @@ class evaluationManager {
     public function get($par, $val) {
         $evaluation = [];
         $request = "SELECT * FROM evaluation WHERE '{$par}' = '{$val}'";
-        $query = $this->_co->query($request);
+        $query = $this->_co->prepare($request);
+        $query->execute();
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
             $evaluation[]= new evaluation($data);
@@ -17,8 +18,9 @@ class evaluationManager {
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM evaluation WHERE id_evaluation = '{$val}'");
-        
+        $query = $this->_co->prepare("SELECT * FROM evaluation WHERE id_evaluation = '{$val}'");
+        $query->execute();
+
         $data = $query->fetch(PDO::FETCH_ASSOC);
         $evaluation= new evaluation($data);
 

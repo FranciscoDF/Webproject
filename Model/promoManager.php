@@ -8,7 +8,8 @@ class promoManager {
     public function get($par, $val) {
         $promo = [];
         $request = "SELECT * FROM promotion WHERE '{$par}' = '{$val}'";
-        $query = $this->_co->query($request);
+        $query = $this->_co->prepare($request);
+        $query->execute();
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
             $promo[]= new promo($data);
@@ -17,8 +18,9 @@ class promoManager {
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM promotion WHERE id_promotion = '{$val}'");
-        
+        $query = $this->_co->prepare("SELECT * FROM promotion WHERE id_promotion = '{$val}'");
+        $query->execute();
+
         $data = $query->fetch(PDO::FETCH_ASSOC);
         $promo= new promo($data);
 

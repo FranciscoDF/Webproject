@@ -8,7 +8,8 @@ class sectorManager {
     public function get($par, $val) {
         $sector = [];
         $request = "SELECT * FROM secteur WHERE '{$par}' = '{$val}'";
-        $query = $this->_co->query($request);
+        $query = $this->_co->prepare($request);
+        $query->execute();
         
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
             $sector[]= new sector($data);
@@ -17,8 +18,9 @@ class sectorManager {
     }
 
     public function getbyid($val) {
-        $query = $this->_co->query("SELECT * FROM secteur WHERE id_secteur = '{$val}'");
-        
+        $query = $this->_co->prepare("SELECT * FROM secteur WHERE id_secteur = '{$val}'");
+        $query->execute();
+
         $data = $query->fetch(PDO::FETCH_ASSOC);
         $sector= new sector($data);
 
