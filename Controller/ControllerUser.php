@@ -85,7 +85,7 @@ class ControllerUser extends Model
             if ($user){
                 $message = 'Your user has been added';
             } else {
-                $message = 'Sorry, a problem occured during the process. Please try again !'
+                $message = 'Sorry, a problem occured during the process. Please try again !';
             }
         }
 

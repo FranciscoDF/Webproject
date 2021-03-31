@@ -23,9 +23,13 @@ class role extends Model
     public function name_role() {return $this->_name_role;}
 
     public function setId_role($id) {
-        $id_role = (int) $id;
-        if ($id_role > 0)
+        $type = gettype($id);
+        if ($type == 'int')
             $this->_id_role = $id_role;
+
+        /*$id_role = (int) $id;
+        if ($id_role > 0)
+            $this->_id_role = $id_role;*/
     }
 
     public function setNom_role($name) {
