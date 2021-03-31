@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="Companies.css"/>
         <title>Update User</title>
     </head>
-    <body>
+    <body class="corps">
         <header>
         </header>
         <main>
