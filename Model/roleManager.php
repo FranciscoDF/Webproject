@@ -12,8 +12,8 @@ class roleManager {
 
         while ($data = $query->fetch(PDO::FETCH_ASSOC)) {
             $role[]= new role($data);
-            $test = new role($data);
-            print_r($test->name_role());
+            /*$test = new role($data);
+            print_r($test->name_role());*/
         }
 
         return $role;
@@ -34,8 +34,9 @@ class roleManager {
 
         $query = $this->_co->query("SELECT * FROM role");
 
-        while ($data = $query->fetch(PDO::FETCH_ASSOC))
+        while ($data = $query->fetch(PDO::FETCH_ASSOC)){
             $role[] = new role($data);
+        }
         
         return $role;
     }
