@@ -41,7 +41,12 @@ class userManager {
     }
 
     public function delete(user $user){
-        $this->_co->exec('DELETE FROM utilisateur WHERE id ='.$user->id());
+        $query = $this->_co->prepare('DELETE FROM utilisateur WHERE id_utilisateur = :id_utilisateur');
+        $result = $query->execute([
+            'id_utilisateur' => $user->id_user()
+        ]);
+
+        return $result;
     }
 
     public function add(user $user) {
