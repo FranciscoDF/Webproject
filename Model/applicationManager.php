@@ -16,6 +16,16 @@ class applicationManager {
         return $application;
     }
 
+    public function getbyid($val) {
+        $query = $this->_co->query("SELECT * FROM candidature WHERE id_candidature = '{$val}'");
+        
+        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $application= new application($data);
+
+        return $application;
+    }
+
+
     public function getList() {
         $application = [];
         $query = $this->_co->query("SELECT * FROM candidature");

@@ -2,14 +2,12 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="Companies.css"/>
-        
-       
+        <link rel="stylesheet" type="text/css" href="View/companies.css"/>
     </head>
     <body class="corps">
         <header>
         </header>
-        <main>
+        
             <form action="http://localhost/ProjetWeb/Webproject/?url=user/add" method="post" class="formul">
                 <section>
                     <fieldset class="formb1">
@@ -61,6 +59,6 @@
                     </fieldset>
                 </section>
             </form>
-        </main>
+        
     </body>
 </html>
