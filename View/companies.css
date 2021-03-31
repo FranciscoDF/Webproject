@@ -4,39 +4,37 @@
 	box-sizing: border-box;
 }
 
-body {
+.corps {
 	font-family: 'Muli', sans-serif;
 	min-height: 100vh;
 	margin: 0;
 }
 
 
-form {
+.formul {
     display: flex;
 }
 
-fieldset {
-    border: none;
-}
-
 .formb1{
+    border: none;
     margin-left: auto;
     margin-top: 50%;
 }
 .formb2{
+    border: none;
     margin-top: 50%;
     margin-left: 60%;
 }
     
 
-img {
+*/*img {
     margin-left: auto;
     padding: 0.2%;
     height: 20%;
     width: 20%;
     margin-top: 150px;
     
-}
+}*/
 
 .button_a button{
 
@@ -124,11 +122,11 @@ img {
         margin-left: 5px;
     }  
     
-    img {
+    /*img {
         margin-left: 0px;
         height: 250px;
         width: 250px;
-    }
+    }*/
 }
 
 /*@media screen and (max-width: 850px) {

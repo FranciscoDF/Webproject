@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="Companies.css"/>
     </head>
-    <body>
+    <body class="corps">
         <header>
         </header>
         <main>
