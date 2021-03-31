@@ -92,11 +92,12 @@ class ControllerUser extends Model
         $this->_view = new Views('UserAddValid');
         $this->_view->generate(array('message' => $message));
 
-    }
+    }}
 
     /*function saveUser($_POST){
 
     }*/
+    
     private function userupdate(user $user){
         $this->_userManager = new userManager($_bdd);
         $user= $this->_userManager->update();
