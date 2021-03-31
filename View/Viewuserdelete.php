@@ -7,7 +7,7 @@
     <body class="corps">
         <header>
         </header>
-            <form action="http://localhost/ProjetWeb/Webproject/?url=user/delete" method="post" class="formul">
+            <form action="./?url=user/delete" method="post" class="formul">
                 <section>
                     <fieldset class="formb1">
                     <label> ID User</label>

@@ -47,12 +47,12 @@
     <div class="button_a">
     <button id="adder">Add</button>
 
-      <form action="http://localhost:8080/ProjetWeb/Webproject/?url=user/formupdate" method="POST">
+      <form action="./?url=user/formupdate" method="POST">
       <input type="text" class="getbyid" id="id_utilisateur" name="id_utilisateur" placeholder="Enter User ID to Update">
       <button id="updater" class="update">Update</button>
       </form>
 
-      <form action="" method="POST">
+      <form action="./?url=user/delete" method="POST">
       <input type="text" class="getbyid" id="id_utilisateur" name="id_utilisateur" placeholder="Enter User ID to Delete">
       <button id="deleter" class="delete">Delete</button>
       </form>

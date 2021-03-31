@@ -9,7 +9,7 @@
         <header>
         </header>
         <main>
-            <form action="" method="post" class="formul">
+            <form action="./?url=industries/add" method="post" class="formul">
                 <section>
                     <fieldset class="formb1">
                         <label>Id_indusrie</label>

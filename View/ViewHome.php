@@ -5,7 +5,6 @@
 <head>
     <meta charset="utf-8"> 
     <link rel="stylesheet" href="View/accueil.css">
-    <link rel="stylesheet" href="View/template.css">
 </head>
 
 <body>
