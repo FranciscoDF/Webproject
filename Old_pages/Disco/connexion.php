@@ -1,3 +1,6 @@
+<?php setcookie('identifiant',$ident) ?>
+<?php setcookie('mdp',$mdp) ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -29,11 +32,19 @@
                         $err = $_GET['erreur'];
                         if($err==1)
                             echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                    }*/
+                    }
                     if(isset($_GET['erreur'])) {
                         $err = $_GET['erreur'];
                         if($err==1)
                             echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    }*/
+                    if(isset($_COOKIE['identifiant'] && $_COOKIE['mdp']))
+                    {
+                        echo "ident et mdp c'est okay";
+                    }
+                    else
+                    {
+                        echo "ident et mdp c'est okay";
                     }
                     ?>
                 </section>

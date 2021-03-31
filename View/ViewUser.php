@@ -1,7 +1,11 @@
+<?php setcookie('pseudo', 'M@teo21', time() + 365*24*3600, null, null, false, true); ?>
+
+
 <DOCTYPE html>
 <html>
 <head>
-        <meta charset="utf-8"/>       
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="ViewUser.css"/>       
 </head>
 
 <body>
@@ -14,7 +18,7 @@
         <option value="age">Age</option>
     </select>   
     </div>
-
+    
     <div>
       
     <table id='empTable' class='dataTable'><tr>
@@ -42,8 +46,9 @@
     </div>
     <div class="button_a">
       <button id="adder">Add</button>
-      <button id="updater">Update</button>
-      <button id="deleter">Delete</button>
+      <input type="text" class="getbyid" placeholder="Enter User ID to Update">
+      <button id="updater" class="update">Update</button>
+      <button id="deleter" class="delete">Delete</button>
     </div>
 
     <script src="View/ViewUser.js">
