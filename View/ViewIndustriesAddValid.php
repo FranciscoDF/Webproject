@@ -18,6 +18,7 @@ echo $message;
     <button id="valid">return to add page</button>
 </div>
 
-<script src="View/ViewIndustriesAddValid.js">
+<script src="View/ViewIndustriesAddValid.js"></script>
+
 </body>
 </html>

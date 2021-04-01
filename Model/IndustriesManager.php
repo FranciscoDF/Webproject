@@ -50,7 +50,7 @@ class industriesManager {
     public function add(industries $industries) {
         $query = $this->_co->prepare('INSERT INTO entreprise(nom_entreprise, lieu_entreprise, evalMoy_entreprise, nbStagiaire_entreprise, description_entreprise, id_secteur) VALUES (:nom_entreprise, :lieu_entreprise, :evalMoy_entreprise, :nbStagiaire_entreprise, :description_entreprise, :id_secteur)');
         $result = $query->execute([
-            'nom_entreprise'=> $industries->name_entreprise(),
+            'nom_entreprise'=> $industries->nom_entreprise(),
             'lieu_entreprise'=> $industries->lieu_entreprise(),
             'evalMoy_entreprise'=> $industries->evalMoy_entreprise(),
             'nbStagiaire_entreprise'=> $industries->nbStagiaire_entreprise(),
@@ -60,11 +60,11 @@ class industriesManager {
     }
 
 
-    public function update(user $industries) {
-        $query = $this->_co->prepare('UPDATE utilisateur SET user_utilisateur = :user_utilisateur, mdp_utilisateur = :mdp_utilisateur, nom_utilisateur = :nom_utilisateur, prenom_utilisateur = :prenom_utilisateur, id_role = :id_role, id_promotion = :id_promotion, id_centre = :id_centre ');
+    public function update(industries $industries) {
+        $query = $this->_co->prepare('UPDATE entreprise SET nom_entreprise = :nom_entreprise, lieu_entreprise = :lieu_entreprise, evalMoy_entreprise = :evalMoy_entreprise, nbStagiare_entreprise = :nbStagiare_entreprise, description_entreprise = :description_entreprise, id_secteur = :id_secteur, WHERE id_entrepries = :id_entreprise ');
         $result= $query->execute([
             'id_entreprise' => $industries->id_industries(),
-            'nom_entreprise'=> $industries->name_entreprise(),
+            'nom_entreprise'=> $industries->nom_entreprise(),
             'lieu_entreprise'=> $industries->lieu_entreprise(),
             'evalMoy_entreprise'=> $industries->evalMoy_entreprise(),
             'nbStagiaire_entreprise'=> $industries->nbStagiaire_entreprise(),

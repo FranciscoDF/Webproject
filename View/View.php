@@ -11,6 +11,8 @@ class Views{
     // GENERE ET AFFICHE LA VIEW
     public function generate($data)
     {   
+        /*$secteur= $data['secteur'];
+        print_r($secteur->id_sector());*/
         //PARTIE MAIN DE LA VUE 
         $content = $this->generateFile($this->_file, $data);
         /*$temp = $data[1];

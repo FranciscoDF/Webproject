@@ -31,7 +31,7 @@
 
       <?php $this->_t= 'Industries';
       foreach($industries as $industries): ?>
-      <tr><td><h2><?= $industries->nom_entreprise() ?></h2></td>
+      <tr><td><h2><?= $industries->id_entreprise() ?></h2></td>
       <td><h2><?= $industries->nom_secteur() ?></h2></td>
       <td><h2><?= $industries->lieu_entreprise() ?></h2></td>
       <td><h2><?= $industries->evalMoy_entreprise() ?></h2></td>

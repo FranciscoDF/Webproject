@@ -30,10 +30,10 @@ class sectorManager {
     public function getList() {
         $sector = [];
 
-        $query = $this->_co->$query("SELECT * FROM secteur");
+        $query = $this->_co->query("SELECT * FROM secteur");
 
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
-            $sector = new sector($data);
+            $sector[] = new sector($data);
         
         return $sector;
     }

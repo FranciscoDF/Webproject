@@ -23,7 +23,7 @@ class sector extends Model{
     public function name_sector() {return $this->_name_sector;}
 
     public function setId_secteur($id) {
-        $this->_id_sector = (int) $id;
+        $id_sector = (int) $id;
         if ($id_sector > 0)
             $this->_id_sector = $id;
     }

@@ -15,7 +15,7 @@
     <main>
     <header>
       <div class="logo">
-        <a href="./?url=home"><img src="View/cesi.png"></a><br><br><br><br>
+        <a href="./?url=home"><img alt="logo" src="View/cesi.png"></a><br><br><br><br>
       </div>
       
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -62,7 +62,7 @@
 
     <footer>
     <p>
-        Mentions légales <br>
+       Legal Notice <br>
     <p>
         <script src="View/assets/vendors/jquery/jquery-3.5.1.min.js"></script>
         <script src="View/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -8,6 +8,7 @@ class industries extends Model{
     private $_nbStagiaire_entreprise;
     private $_description_entreprise;
     private $_id_secteur;
+    private $_nom_secteur;
 
     public function __construct($data) {
         $this->hydrate( $data);
@@ -20,6 +21,7 @@ class industries extends Model{
             if (method_exists($this, $method))
                 $this->$method($value);
         }
+        $this->getsecteur();
     }
 
     public function id_entreprise() {return $this->_id_entreprise;}
@@ -29,6 +31,16 @@ class industries extends Model{
     public function nbStagiaire_entreprise() {return $this->_nbStagiaire_entreprise;}
     public function description_entreprise() {return $this->_description_entreprise;}
     public function id_secteur() {return $this->_id_secteur;}
+    public function nom_secteur() {return $this->_nom_secteur;}
+
+    public function getsecteur() {
+        $yo = $this->getBdd();
+        $secteur = new sectorManager($yo);
+        $name_sector = $secteur->getbyid($this->_id_secteur);
+        $name = $name_sector->name_sector();
+        
+        $this->_nom_secteur = $name;
+    }
 
     public function setId_entreprise($id) {
         $id_entreprise = (int) $id;
