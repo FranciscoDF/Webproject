@@ -17,7 +17,7 @@ class ControllerIndustries extends Model
                 break;
             case 'ajouter' : industriesadd(); break;
             case 'update' : industriesupdate(); break;
-            case 'delete' : industriesdelete(); break;
+            
         }
     }
 
@@ -28,8 +28,8 @@ class ControllerIndustries extends Model
 
         
 
-        /*foreach  ($user as $row) {
-            $temps = $row[$i]->id_user();
+        /*foreach  ($industries as $row) {
+            $temps = $row[$i]->id_industries();
             print  'Pseudo :' . $temp ;
             $temps = '';
             $i++;
@@ -39,14 +39,46 @@ class ControllerIndustries extends Model
         $this->_view->generate(array('industries' => $industries));
     }
 
-    private function useradd(user $industries) {
-        $this->_industriesManager = new industriesManager($_bdd);
-        $industries= $this->_industriesManager->add();
+    
+    private function industriesadd() {
+        
+        if(isset($_POST['submit'])){
+            $temp = new industries($_POST);
+            $yo = $this->getBdd();
+            $this->_industriesManager = new industriesManager($yo);
+            $industries= $this->_industriesManager->add($temp);
+
+            if ($industries){
+                $message = 'Your industries has been added';
+            } else {
+                $message = 'Sorry, a problem occured during the process. Please try again !';
+            }
+        }
+
+        $this->_view = new Views('IndustriesAddValid');
+        $this->_view->generate(array('message' => $message));
+
     }
 
-    private function userupdate(user $industries){
-        $this->_industriesManager = new industriesManager($_bdd);
-        $industries= $this->_industriesManager->update();
+
+    private function industriesupdate(){
+        if(isset($_POST['submit'])){
+            $temp = new industries($_POST);
+            $yo = $this->getBdd();
+            $this->_industriesManager = new industriesManager($yo);
+            $industries= $this->_industriesManager->update($temp);
+
+            if ($industries){
+                $message = 'Your industries has been updated';
+            } else {
+                $message = 'Sorry, a problem occured during the process. Please try again !';
+            }
+        }
+        $this->_view = new Views('industriesUpdateValid');
+        $this->_view->generate(array('message' => $message));
     }
+
 
 }
+
+
