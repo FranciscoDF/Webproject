@@ -37,7 +37,7 @@
               <a class="nav-link" href="./?url=user/view">Users</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="stages.php">Internship</a>
+              <a class="nav-link" href="./?url=internship/view">Internship</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="account.php">Account</a>
