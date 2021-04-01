@@ -36,9 +36,20 @@
       </tr></table>
     </div>
     <div class="button_a">
-      <button id="go">Add</button>
-      <button id="go">Update</button>
-      <button id="go">Delete</button>
+    <button id="adder">Add</button>
+
+      <form action="./?url=internship/formupdate" method="POST">
+      <input type="text" class="getbyid" id="id_offre" name="id_offre" placeholder="Enter Offer ID to Update">
+      <button id="updater" class="update">Update</button>
+      </form>
+
+      <form action="./?url=internship/delete" method="POST">
+      <input type="text" class="getbyid" id="id_utilisateur" name="id_utilisateur" placeholder="Enter User ID to Delete">
+      <button id="deleter" class="delete">Delete</button>
+      </form>
     </div>
+
+
+    <script src="View/ViewInternship.js">
 </body>
 </html>
