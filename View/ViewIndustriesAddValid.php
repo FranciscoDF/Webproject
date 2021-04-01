@@ -14,7 +14,10 @@ echo $message;
 
 ?>
 </h1>
+<div class="button_a">
+    <button id="valid">return to add page</button>
+</div>
 
-
+<script src="View/ViewIndustriesAddValid.js">
 </body>
 </html>

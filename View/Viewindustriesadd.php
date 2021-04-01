@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="Companies.css"/>
+        <link rel="stylesheet" type="text/css" href="View/Companies.css"/>
         <title>ADD User</title>
     </head>
     <body class="corps">
@@ -12,24 +12,28 @@
             <form action="./?url=industries/add" method="post" class="formul">
                 <section>
                     <fieldset class="formb1">
-                        <label>Id_indusrie</label>
-                        <input type="text" class="textbox" id="txtbox" name="Name" placeholder="Google" required/>
-                        <label>Name_indutrie</label>
-                        <input type="text" class="textbox" id="txtbox1" name="ActivityArea" placeholder="IT" required/>
+                        <label>Name</label>
+                        <input type="text" class="textbox" id="nom_entreprise" name="nom_entreprise" placeholder="Google" required/>
+                        <label>Activity Area</label>
+                        <div class="choose">
+                            <?php $secteur = $test[0];?>
+                            <select name="id_secteur" id="id_secteur">
+                                <option value="nothing">Choose a role</option>
+                                <?php foreach($secteur as $secteur): ?>
+                                <option value="<?= $secteur->id_sector()?>"><?= $secteur->name_sector() ?></option>
+                                <?php endforeach; ?>
+                            </select>   
+                        </div>
                         <label>Location_industrie</label>
-                        <input type="text" class="textbox" id="txtbox2" name="Skills" placeholder="Smart"/>
-                        <label>Evaluation</label>
-                        <input type="text" class="textbox" id="txtbox3" name="TrustLevel" placeholder="lvl10"/>
+                        <input type="text" class="textbox" id="lieu_entreprise" name="lieu_entreprise" placeholder="Smart" required/>
                     </fieldset>
                 </section>
                 <section>
                     <fieldset class="formb2">
-                        <label>Trainee numbers</label>
-                        <input type="text" class="textbox" id="txtbox4" name="TraineeNumbers" placeholder="52"/>
+                        <label>Number of trainees </label>
+                        <input type="text" class="textbox" id="nbrStagiaire_entreprise" name="nbrStagiaire_entreprise" placeholder="52"/>
                         <label>Description</label>
-                        <input type="text" class="textbox" id="txtbox5" name="Location" placeholder="London" required/>
-                        <label>Activity Area</label>
-                        <input type="text" class="textbox" id="txtbox6" name="Grades" placeholder="4/5"/> <br/>
+                        <input type="text" class="textbox" id="description_entreprise" name="description_entreprise" placeholder="We are the best industrie in the world" required/>
                         <br/>
                         <div class="button_a">
                             <button id="go_d">Add</button>
