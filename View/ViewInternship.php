@@ -44,7 +44,7 @@
       </form>
 
       <form action="./?url=internship/delete" method="POST">
-      <input type="text" class="getbyid" id="id_utilisateur" name="id_utilisateur" placeholder="Enter User ID to Delete">
+      <input type="text" class="getbyid" id="id_offre" name="id_offre" placeholder="Enter User ID to Delete">
       <button id="deleter" class="delete">Delete</button>
       </form>
     </div>

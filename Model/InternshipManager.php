@@ -39,7 +39,12 @@ class InternshipManager {
     }
 
     public function delete(internship $internship){
-        $this->_co->exec('DELETE FROM offre WHERE id ='.$industries->id());
+        $query = $this->_co->prepare('DELETE FROM offre WHERE id_offre = :id_offre');
+        $result = $query->execute([
+            'id_offre' => $internship->id_internship()
+        ]);
+
+        return $result;
     }
 
     public function add(internship $internship) {

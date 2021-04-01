@@ -27,7 +27,9 @@ class ControllerInternship extends Model
             case 'update' :
                 $this->internshipupdate();
                 break;
-            case 'delete' : internshipdelete(); break;
+            case 'delete' :
+                $this->internshipdelete();
+             break;
         }
     }
 
@@ -110,9 +112,22 @@ class ControllerInternship extends Model
         $this->_view->generate(array('message' => $message));
     }
 
-    private function userupdate(user $industries){
-        $this->_industriesManager = new industriesManager($_bdd);
-        $industries= $this->_industriesManager->update();
+    private function internshipdelete(){
+      
+        $yo = $this->getBdd();
+
+        $temp = new internshipManager($yo);
+        $internship = $temp->getbyid($_POST['id_offre']);
+        $result = $temp->delete($internship);
+        if ($result){
+            $message = 'Your offer has been deleted';
+        } else {
+            $message = 'Sorry, a problem occured during the process. Please try again !';
+        }
+
+        $this->_view = new Views('InternshipDelete');
+        $this->_view->generate(array('message' => $message));
+        
     }
 
 }
