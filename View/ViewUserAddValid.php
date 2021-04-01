@@ -18,6 +18,6 @@ echo $message;
     <button id="valid">return to add page</button>
 </div>
 
-<script src="View/ViewUserAddValid.js">
+<script src="View/ViewUserAddValid.js"></script>
 </body>
 </html>
