@@ -8,3 +8,14 @@
 .delete {
     margin-left: 50%;
 }
+
+/*if(isset($_GET['erreur'])){
+                        $err = $_GET['erreur'];
+                        if($err==1)
+                            echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    }
+                    if(isset($_GET['erreur'])) {
+                        $err = $_GET['erreur'];
+                        if($err==1)
+                            echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    } cela vien de connexion.php*/
