@@ -1,5 +1,23 @@
-<?php setcookie('identifiant',$ident) ?>
-<?php setcookie('mdp',$mdp) ?>
+<?php
+session_start();
+$ident = abc;
+$mdp= yolo; 
+setcookie('identifiant',$ident, time() + 365*24*3600, null, null, false, true);
+setcookie('mdp',$mdp,  time() + 365*24*3600, null, null, false, true);
+                    
+
+                    var_dump( $_COOKIE['identifiant']);
+                    if(isset($_COOKIE['identifiant']) && ($_COOKIE['mdp']))
+                    {
+                        echo "ident et mdp c'est okay". $_COOKIE['identifiant'];
+                    }
+                    else
+                    {
+                        echo "ident et mdp c'est okay";
+                    }
+                    ?>
+<?php  ?>
+<?php $mdp= yolo; setcookie('mdp',$mdp) ?>
 
 <!doctype html>
 <html lang="fr">
@@ -11,8 +29,9 @@
 
     <body>
         <main>
+            
                     
-            <form method= "POST" action="page_connexion.php">
+            <form method= "POST" action="">
                 <section style="text-align: center;">
                     <h2> Connexion:</h2>
                     <fieldset style=" padding: 6px; margin-bottom: 40%; margin-left: 35%; margin-right: 35%; ">
@@ -27,26 +46,7 @@
                         <br>
                         <input id='submit' type="submit" value="Valider">
                     </fieldset>
-                    <?php
-                    /*if(isset($_GET['erreur'])){
-                        $err = $_GET['erreur'];
-                        if($err==1)
-                            echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                    }
-                    if(isset($_GET['erreur'])) {
-                        $err = $_GET['erreur'];
-                        if($err==1)
-                            echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                    }*/
-                    if(isset($_COOKIE['identifiant'] && $_COOKIE['mdp']))
-                    {
-                        echo "ident et mdp c'est okay";
-                    }
-                    else
-                    {
-                        echo "ident et mdp c'est okay";
-                    }
-                    ?>
+                    
                 </section>
             </form>
 

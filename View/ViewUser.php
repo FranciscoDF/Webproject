@@ -5,7 +5,7 @@
 <html>
 <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="ViewUser.css"/>       
+        <link rel="stylesheet" type="text/css" href="View/ViewUser.css"/>       
 </head>
 
 <body>

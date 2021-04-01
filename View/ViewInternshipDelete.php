@@ -7,10 +7,10 @@
     <body class="corps">
         <header>
         </header>
-            <form action="./?url=industries/delete" method="post" class="formul">
+            <form action="./?url=internship/delete" method="post" class="formul">
                 <section>
                     <fieldset class="formb1">
-                    <label> ID Industries</label>
+                    <label> ID Internship</label>
                         <input type="text" class="textbox" id="ID" name="user"/>
                     </fieldset>
                         <div class="button_a">

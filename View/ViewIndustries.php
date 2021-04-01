@@ -16,8 +16,9 @@
         <option value="age">Age</option>
     </select>   
     </div>
-<div>
-      
+
+    
+    <div>
     <table id='empTable' class='dataTable'><tr>
       <tr>
       <th><h2>Compagny Name</h2></th>
@@ -31,19 +32,28 @@
       <?php $this->_t= 'Industries';
       foreach($industries as $industries): ?>
       <tr><td><h2><?= $industries->nom_entreprise() ?></h2></td>
+      <td><h2><?= $industries->nom_secteur() ?></h2></td>
       <td><h2><?= $industries->lieu_entreprise() ?></h2></td>
       <td><h2><?= $industries->evalMoy_entreprise() ?></h2></td>
       <td><h2><?= $industries->nbStagiaire_entreprise() ?></h2></td>
       <td><h2><?= $industries->description_entreprise() ?></h2></td>
-      <td><h2><?= $industries->id_secteur() ?></h2></td>
+      
       <?php endforeach; ?>
       </tr></table>
     </div>
   
-    
     <div class="button_a">
-  <button id="go">Add</button>
-  <button id="go">Update</button>
-  <button id="go">Delete</button>
-</div>
+      <button id="adder">Add</button>
+      <form action="./?url=industries/formupdate" method="POST">
+      <input type="text" class="getbyid" id="id_entreprise" name="id_entreprise" placeholder="Enter Industrie ID to Update">
+      <button id="updater" class="update">Update</button>
+      </form>
+
+      <form action="./?url=industries/delete" method="POST">
+      <input type="text" class="getbyid" id="id_entreprise" name="id_entreprise" placeholder="Enter Industrie ID to Delete">
+      <button id="deleter" class="delete">Delete</button>
+      </form>
+    </div>
+
+<script src="View/ViewIndustries.js">
 </body>
