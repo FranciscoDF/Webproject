@@ -1,0 +1,26 @@
+{
+    "name": "Cesindeed",
+    "short_name": "Cesi",
+    "start_url": "index.php",
+    "display": "standalone",
+    "background-color": "#FFFF",
+    "theme_color" : "#03a9f4",
+    "orientation": "portrait-primary", 
+    "icons": [
+        {
+          "src": "./view/cesi.png",
+          "type": "image/png",
+          "sizes": "72x72"
+        },
+        {
+            "src": "./view/contract.png",
+            "type": "image/png",
+            "sizes": "72x72"
+          },
+        {
+            "src": "./view/valide.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        }
+    ]
+}
