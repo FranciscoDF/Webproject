@@ -17,9 +17,7 @@
         <option value="-alph">Z-A</option>
         <option value="age">Age</option>
     </select>   
-    </div>
-    
-    <div>
+   
       
     <table id='empTable' class='dataTable'><tr>
       <tr>

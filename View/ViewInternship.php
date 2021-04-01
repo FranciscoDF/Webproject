@@ -39,7 +39,7 @@
     <button id="adder">Add</button>
 
       <form action="./?url=internship/formupdate" method="POST">
-      <input type="text" class="getbyid" id="id_utilisateur" name="id_utilisateur" placeholder="Enter User ID to Update">
+      <input type="text" class="getbyid" id="id_offre" name="id_offre" placeholder="Enter Offer ID to Update">
       <button id="updater" class="update">Update</button>
       </form>
 
